@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="ClienteMovil.Pages.ProductosPage"
+             Title="Electrodomésticos">
+    <Grid RowDefinitions="Auto,*">
+        
+        <!-- Header -->
+        <Frame Grid.Row="0" 
+               BackgroundColor="#96FF96" 
+               CornerRadius="0" 
+               Padding="20">
+            <Label Text="Electrodomésticos"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   TextColor="#000000"
+                   HorizontalOptions="Center"/>
+        </Frame>
+        
+        <!-- Lista de Productos -->
+        <RefreshView Grid.Row="1" 
+                     x:Name="RefreshView" 
+                     Refreshing="OnRefreshing">
+            <CollectionView x:Name="ProductosCollection"
+                            SelectionMode="None">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="10"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.EmptyView>
+                    <VerticalStackLayout Padding="20" VerticalOptions="Center">
+                        <Label Text="📦"
+                               FontSize="60"
+                               HorizontalOptions="Center"/>
+                        <Label Text="No hay productos disponibles"
+                               FontSize="16"
+                               HorizontalOptions="Center"
+                               TextColor="#999"/>
+                    </VerticalStackLayout>
+                </CollectionView.EmptyView>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Margin="10,5" 
+                               Padding="0" 
+                               CornerRadius="15" 
+                               HasShadow="True">
+                            <Grid Padding="15" ColumnDefinitions="80,*,Auto" RowDefinitions="Auto,Auto,Auto">
+                                
+                                <!-- Imagen -->
+                                <Frame Grid.Row="0"
+                                       Grid.RowSpan="3"
+                                       Grid.Column="0"
+                                       CornerRadius="10"
+                                       Padding="0"
+                                       HeightRequest="80"
+                                       WidthRequest="80"
+                                       HasShadow="False"
+                                       BackgroundColor="#F0F0F0">
+                                    <Image Source="{Binding ImageUrl}"
+                                           Aspect="AspectFill"/>
+                                </Frame>
+                                
+                                <!-- Nombre -->
+                                <Label Grid.Row="0" 
+                                       Grid.Column="1"
+                                       Text="{Binding Nombre}"
+                                       FontSize="16"
+                                       FontAttributes="Bold"
+                                       Margin="10,0,0,5"/>
+                                
+                                <!-- Precio -->
+                                <Label Grid.Row="1" 
+                                       Grid.Column="1"
+                                       Text="{Binding PrecioVenta, StringFormat='${0:N2}'}"
+                                       FontSize="18"
+                                       TextColor="#4CAF50"
+                                       FontAttributes="Bold"
+                                       Margin="10,0,0,10"/>
+                                
+                                <!-- Botones -->
+                                <HorizontalStackLayout Grid.Row="2" 
+                                                       Grid.Column="1"
+                                                       Grid.ColumnSpan="2"
+                                                       Spacing="10"
+                                                       Margin="10,0,0,0">
+                                    <Button Text="Efectivo"
+                                            BackgroundColor="#96FF96"
+                                            TextColor="#000000"
+                                            CornerRadius="20"
+                                            FontSize="12"
+                                            Padding="15,5"
+                                            CommandParameter="{Binding .}"
+                                            Clicked="OnEfectivoClicked"/>
+                                    
+                                    <Button Text="Crédito Directo"
+                                            BackgroundColor="#FFD700"
+                                            TextColor="#000000"
+                                            CornerRadius="20"
+                                            FontSize="12"
+                                            Padding="15,5"
+                                            CommandParameter="{Binding .}"
+                                            Clicked="OnCreditoClicked"/>
+                                </HorizontalStackLayout>
+                                
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
+        
+    </Grid>
+</ContentPage>

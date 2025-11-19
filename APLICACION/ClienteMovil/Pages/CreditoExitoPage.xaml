@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="ClienteMovil.Pages.CreditoExitoPage"
+             Title="Crédito Aprobado"
+             BackgroundColor="#FFFFFF">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+            
+            <Frame BackgroundColor="#2ECC71" 
+                   CornerRadius="10" 
+                   Padding="15" 
+                   Margin="0,20,0,20">
+                <Label Text="Venta Exitosa!"
+                       FontSize="28"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       TextColor="#FFFFFF"/>
+            </Frame>
+            
+            <Label Text="Tabla de Amortización"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   Margin="0,10,0,10"
+                   TextColor="#000000"/>
+            
+            <CollectionView x:Name="CuotasCollection"
+                            SelectionMode="None">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Margin="0,5" Padding="15" CornerRadius="10" BackgroundColor="White" HasShadow="False">
+                            <Grid RowDefinitions="Auto,Auto,Auto" ColumnDefinitions="*,Auto">
+                                <Label Grid.Row="0" Grid.Column="0"
+                                       Text="{Binding NumeroCuota, StringFormat='Cuota #{0}'}"
+                                       FontSize="16"
+                                       FontAttributes="Bold"/>
+                                <Label Grid.Row="0" Grid.Column="1"
+                                       Text="{Binding ValorCuota, StringFormat='${0:N2}'}"
+                                       FontSize="16"
+                                       FontAttributes="Bold"
+                                       TextColor="#4CAF50"/>
+                                <Label Grid.Row="1" Grid.Column="0"
+                                       Text="{Binding FechaVencimiento, StringFormat='Vence: {0:dd/MM/yyyy}'}"
+                                       FontSize="12"
+                                       TextColor="#666"/>
+                                <Label Grid.Row="2" Grid.Column="0"
+                                       Text="{Binding SaldoRestante, StringFormat='Saldo: ${0:N2}'}"
+                                       FontSize="12"
+                                       TextColor="#999"/>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            
+            <Button Text="FINALIZAR"
+                    BackgroundColor="#96FF96"
+                    TextColor="#000000"
+                    CornerRadius="25"
+                    HeightRequest="50"
+                    FontAttributes="Bold"
+                    Margin="0,20,0,20"
+                    Clicked="OnFinalizarClicked"/>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

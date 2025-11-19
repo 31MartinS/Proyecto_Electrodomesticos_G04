@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="ClienteMovil.Pages.MenuPage"
+             Title="Menú Principal"
+             BackgroundColor="#FFFFFF">
+    <VerticalStackLayout Padding="20" Spacing="20" VerticalOptions="Center">
+        
+        <Label Text="Prueba Parcial 1"
+               FontSize="32"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="#000000"
+               Margin="0,20,0,10"/>
+        
+        <Label Text="Bienvenido, Monster"
+               FontSize="18"
+               HorizontalOptions="Center"
+               TextColor="#000000"
+               Margin="0,0,0,30"/>
+        
+        <!-- Botón Editar Inventario -->
+        <Frame CornerRadius="15"
+               HasShadow="True"
+               Padding="20"
+               BackgroundColor="#96FF96">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnEditarInventarioClicked"/>
+            </Frame.GestureRecognizers>
+            <Label Text="Editar Inventario"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#000000"/>
+        </Frame>
+        
+        <!-- Botón Realizar Venta -->
+        <Frame CornerRadius="15"
+               HasShadow="True"
+               Padding="20"
+               BackgroundColor="#FFD700">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnRealizarVentaClicked"/>
+            </Frame.GestureRecognizers>
+            <Label Text="Realizar Venta"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#000000"/>
+        </Frame>
+
+        <!-- Botón Ver Facturas -->
+        <Frame CornerRadius="15"
+               HasShadow="True"
+               Padding="20"
+               BackgroundColor="#4A90E2">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnVerFacturasClicked"/>
+            </Frame.GestureRecognizers>
+            <Label Text="Ver Facturas"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#FFFFFF"/>
+        </Frame>
+        
+        <!-- Botón Cerrar Sesión -->
+        <Button Text="CERRAR SESIÓN"
+                BackgroundColor="#D9D9D9"
+                TextColor="#000000"
+                CornerRadius="25"
+                HeightRequest="50"
+                FontAttributes="Bold"
+                Margin="0,30,0,0"
+                Clicked="OnCerrarSesionClicked"/>
+                
+    </VerticalStackLayout>
+</ContentPage>

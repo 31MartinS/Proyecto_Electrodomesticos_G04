@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="ClienteMovil.Pages.VentaCedulaPage"
+             Title="Realizar Venta"
+             BackgroundColor="#FFFFFF">
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="20" VerticalOptions="Center">
+            
+            <Label Text="Realizar Venta"
+                   FontSize="32"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#000000"
+                   Margin="0,20,0,20"/>
+            
+            <Label Text="Ingrese cédula del cliente:"
+                   FontSize="16"
+                   HorizontalOptions="Center"
+                   TextColor="#000000"
+                   Margin="0,10,0,20"/>
+            
+            <!-- Input de Cédula -->
+            <Frame CornerRadius="25"
+                   HasShadow="False"
+                   Padding="0"
+                   BorderColor="#CCCCCC"
+                   BackgroundColor="White">
+                <Entry x:Name="EntCedula"
+                       Placeholder="Cédula (10 dígitos)"
+                       PlaceholderColor="#999999"
+                       TextColor="#000000"
+                       Keyboard="Numeric"
+                       MaxLength="10"
+                       FontSize="16"
+                       Margin="15,10"/>
+            </Frame>
+            
+            <!-- Mensaje de error/info -->
+            <Label x:Name="LblMensaje" 
+                   TextColor="#F46A6A" 
+                   FontSize="14" 
+                   HorizontalOptions="Center"
+                   IsVisible="False"
+                   Margin="0,10,0,0"/>
+            
+            <!-- Indicador de carga -->
+            <ActivityIndicator x:Name="Loading" 
+                               IsRunning="False" 
+                               Color="#4A90E2"
+                               Margin="0,10,0,0"/>
+            
+            <!-- Botón Continuar -->
+            <Button x:Name="BtnContinuar"
+                    Text="CONTINUAR"
+                    BackgroundColor="#96FF96"
+                    TextColor="#000000"
+                    CornerRadius="25"
+                    HeightRequest="50"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    Margin="0,20,0,0"
+                    Clicked="OnContinuarClicked"/>
+            
+            <!-- Botón Volver -->
+            <Button Text="VOLVER"
+                    BackgroundColor="#D9D9D9"
+                    TextColor="#000000"
+                    CornerRadius="25"
+                    HeightRequest="50"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    Margin="0,10,0,0"
+                    Clicked="OnVolverClicked"/>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

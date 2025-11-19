@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ClienteMovil.Pages.ProductoFormPage"
+             Title="Producto"
+             BackgroundColor="#FFFFFF">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            
+            <Label x:Name="LblTitulo"
+                   Text="Nuevo Producto"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#000000"
+                   Margin="0,10,0,20"/>
+
+            <!-- Código -->
+            <Label Text="Código:"
+                   FontSize="16"
+                   TextColor="#000000"/>
+            <Entry x:Name="EntCodigo"
+                   Placeholder="Código del producto"
+                   PlaceholderColor="#999999"
+                   TextColor="#000000"
+                   BackgroundColor="#F5F5F5"
+                   HeightRequest="50"/>
+
+            <!-- Nombre -->
+            <Label Text="Nombre:"
+                   FontSize="16"
+                   TextColor="#000000"/>
+            <Entry x:Name="EntNombre"
+                   Placeholder="Nombre del producto"
+                   PlaceholderColor="#999999"
+                   TextColor="#000000"
+                   BackgroundColor="#F5F5F5"
+                   HeightRequest="50"/>
+
+            <!-- Descripción -->
+            <Label Text="Descripción:"
+                   FontSize="16"
+                   TextColor="#000000"/>
+            <Editor x:Name="EditorDescripcion"
+                    Placeholder="Descripción del producto"
+                    PlaceholderColor="#999999"
+                    TextColor="#000000"
+                    BackgroundColor="#F5F5F5"
+                    HeightRequest="100"/>
+
+            <!-- Precio -->
+            <Label Text="Precio de Venta:"
+                   FontSize="16"
+                   TextColor="#000000"/>
+            <Entry x:Name="EntPrecio"
+                   Placeholder="0.00"
+                   PlaceholderColor="#999999"
+                   TextColor="#000000"
+                   BackgroundColor="#F5F5F5"
+                   Keyboard="Numeric"
+                   HeightRequest="50"/>
+
+            <!-- Imagen actual (solo en edición) -->
+            <StackLayout x:Name="ImagenActualStack" IsVisible="False" Spacing="10">
+                <Label Text="Imagen Actual:"
+                       FontSize="16"
+                       TextColor="#000000"/>
+                <Image x:Name="ImgActual"
+                       HeightRequest="150"
+                       Aspect="AspectFit"/>
+            </StackLayout>
+
+            <!-- Botón para seleccionar imagen -->
+            <Button x:Name="BtnSeleccionarImagen"
+                    Text="SELECCIONAR IMAGEN"
+                    BackgroundColor="#4A90E2"
+                    TextColor="#FFFFFF"
+                    FontAttributes="Bold"
+                    CornerRadius="25"
+                    HeightRequest="50"
+                    Clicked="OnSeleccionarImagenClicked"/>
+
+            <Label x:Name="LblImagenSeleccionada"
+                   Text=""
+                   FontSize="14"
+                   TextColor="#666666"
+                   HorizontalOptions="Center"/>
+
+            <!-- Botones de acción -->
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="10" Margin="0,20,0,0">
+                <Button Grid.Column="0"
+                        Text="GUARDAR"
+                        BackgroundColor="#96FF96"
+                        TextColor="#000000"
+                        FontAttributes="Bold"
+                        CornerRadius="25"
+                        HeightRequest="50"
+                        Clicked="OnGuardarClicked"/>
+                
+                <Button Grid.Column="1"
+                        Text="CANCELAR"
+                        BackgroundColor="#D9D9D9"
+                        TextColor="#000000"
+                        FontAttributes="Bold"
+                        CornerRadius="25"
+                        HeightRequest="50"
+                        Clicked="OnCancelarClicked"/>
+            </Grid>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

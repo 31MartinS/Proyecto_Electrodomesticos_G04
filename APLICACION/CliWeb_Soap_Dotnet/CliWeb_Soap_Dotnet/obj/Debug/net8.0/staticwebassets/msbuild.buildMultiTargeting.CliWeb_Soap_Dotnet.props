@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\CliWeb_Soap_Dotnet.props" />
+</Project>

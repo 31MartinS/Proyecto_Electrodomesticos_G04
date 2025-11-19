@@ -1,0 +1,120 @@
+﻿@model ClienteWeb.Models.LoginViewModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="login-wrapper">
+    <div class="login-card">
+        <h1 class="login-title">Prueba Parcial 1</h1>
+        <h2 class="login-subtitle">Iniciar Sesión</h2>
+
+        <form asp-action="Index" method="post" class="login-form">
+            <div class="mb-3">
+                <label asp-for="Usuario" class="login-label"></label>
+                <input asp-for="Usuario" class="login-input form-control" />
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Password" class="login-label"></label>
+                <input asp-for="Password" type="password" class="login-input form-control" />
+            </div>
+
+            @if (Model.LoginFallido && !string.IsNullOrEmpty(Model.MensajeError))
+            {
+                <div class="alert alert-danger mt-2">
+                    @Model.MensajeError
+                </div>
+            }
+
+            <button type="submit" class="btn-login">Ingresar</button>
+
+            <!-- Salir: simplemente recarga / cierra sesión.
+                 Si quieres que vaya a otra página, cambia el onclick. -->
+            <button type="button" class="btn-exit" onclick="window.location.href='@Url.Action("Index","Home")'">
+                Salir
+            </button>
+        </form>
+    </div>
+</div>
+
+<style>
+    .login-wrapper {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #ffffff;
+        font-family: 'Segoe UI', Arial, sans-serif;
+    }
+
+    .login-card {
+        width: 380px;
+        text-align: center;
+    }
+
+    .login-title {
+        font-size: 2.3rem;
+        font-weight: 800;
+        margin-bottom: 0.5rem;
+    }
+
+    .login-subtitle {
+        font-size: 1.4rem;
+        font-weight: 400;
+        margin-bottom: 2rem;
+    }
+
+    .login-form {
+        margin-top: 1rem;
+    }
+
+    .login-label {
+        display: block;
+        text-align: left;
+        margin-left: 6px;
+        margin-bottom: 4px;
+        font-size: 0.95rem;
+    }
+
+    .login-input {
+        border-radius: 25px;
+        padding: 0.75rem 1rem;
+        border: 1px solid #dddddd;
+        box-shadow: none;
+    }
+
+        .login-input:focus {
+            outline: none;
+            border-color: #7fd180;
+            box-shadow: 0 0 0 2px rgba(127, 209, 128, 0.3);
+        }
+
+    .btn-login,
+    .btn-exit {
+        width: 70%;
+        border-radius: 25px;
+        border: none;
+        padding: 0.75rem;
+        font-size: 1rem;
+        margin-top: 1rem;
+        cursor: pointer;
+    }
+
+    .btn-login {
+        background-color: #92ff92; /* verde suave */
+    }
+
+        .btn-login:hover {
+            background-color: #7ff07f;
+        }
+
+    .btn-exit {
+        background-color: #dddddd;
+        margin-top: 0.75rem;
+    }
+
+        .btn-exit:hover {
+            background-color: #cccccc;
+        }
+</style>

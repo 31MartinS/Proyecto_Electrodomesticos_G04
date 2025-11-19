@@ -1,0 +1,46 @@
+﻿@model ClienteWeb.Models.VentaEfectivoExitoViewModel
+
+@{
+    ViewData["Title"] = "Pago en efectivo";
+}
+
+<div class="text-center my-4">
+    <h1 class="fw-bold">Pago en Efectivo</h1>
+</div>
+
+<div class="text-center mb-5">
+    <div style="display:inline-block;
+                background-color:#00c853;
+                color:white;
+                padding:12px 40px;
+                border-radius:4px;
+                font-size:1.3rem;
+                font-weight:600;">
+        Venta Exitosa!
+    </div>
+</div>
+
+@* Si quieres, puedes dejar estos datos extras de la factura *@
+@if (Model.Factura != null)
+{
+    <div class="card mb-4" style="max-width:700px;margin:0 auto;">
+        <div class="card-body">
+            <p><strong>N° Factura:</strong> @Model.Factura.NumeroFactura</p>
+            <p><strong>Fecha:</strong> @Model.Factura.Fecha.ToString("g")</p>
+            <p><strong>Total:</strong> @Model.Factura.Total.ToString("C2")</p>
+            <p><strong>Forma de pago:</strong> @Model.Factura.FormaPago</p>
+            <p><strong>Mensaje:</strong> @Model.Factura.Mensaje</p>
+        </div>
+    </div>
+}
+
+<div class="text-center my-4">
+    <a asp-action="Cedula"
+       class="btn"
+       style="background-color:#e0e0e0;
+              border-radius:999px;
+              padding:10px 40px;
+              font-size:1.1rem;">
+        Volver
+    </a>
+</div>

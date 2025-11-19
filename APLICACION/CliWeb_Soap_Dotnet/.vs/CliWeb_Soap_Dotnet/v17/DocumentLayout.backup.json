@@ -1,0 +1,405 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|d:\\p1.1_electrodomesticos_soap_dotnet_gr04\\aplicacion\\cliweb_soap_dotnet\\cliweb_soap_dotnet\\controllers\\ventascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|solutionrelative:cliweb_soap_dotnet\\controllers\\ventascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|d:\\p1.1_electrodomesticos_soap_dotnet_gr04\\aplicacion\\cliweb_soap_dotnet\\cliweb_soap_dotnet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|solutionrelative:cliweb_soap_dotnet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|d:\\p1.1_electrodomesticos_soap_dotnet_gr04\\aplicacion\\cliweb_soap_dotnet\\cliweb_soap_dotnet\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|solutionrelative:cliweb_soap_dotnet\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|d:\\p1.1_electrodomesticos_soap_dotnet_gr04\\aplicacion\\cliweb_soap_dotnet\\cliweb_soap_dotnet\\controllers\\inventariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|solutionrelative:cliweb_soap_dotnet\\controllers\\inventariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|d:\\p1.1_electrodomesticos_soap_dotnet_gr04\\aplicacion\\cliweb_soap_dotnet\\cliweb_soap_dotnet\\views\\ventas\\productos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|solutionrelative:cliweb_soap_dotnet\\views\\ventas\\productos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|d:\\p1.1_electrodomesticos_soap_dotnet_gr04\\aplicacion\\cliweb_soap_dotnet\\cliweb_soap_dotnet\\views\\inventario\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|solutionrelative:cliweb_soap_dotnet\\views\\inventario\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|d:\\p1.1_electrodomesticos_soap_dotnet_gr04\\aplicacion\\cliweb_soap_dotnet\\cliweb_soap_dotnet\\views\\ventas\\cedula.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|solutionrelative:cliweb_soap_dotnet\\views\\ventas\\cedula.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|d:\\p1.1_electrodomesticos_soap_dotnet_gr04\\aplicacion\\cliweb_soap_dotnet\\cliweb_soap_dotnet\\views\\ventas\\efectivo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|solutionrelative:cliweb_soap_dotnet\\views\\ventas\\efectivo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|d:\\p1.1_electrodomesticos_soap_dotnet_gr04\\aplicacion\\cliweb_soap_dotnet\\cliweb_soap_dotnet\\views\\ventas\\efectivoexito.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|solutionrelative:cliweb_soap_dotnet\\views\\ventas\\efectivoexito.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|d:\\p1.1_electrodomesticos_soap_dotnet_gr04\\aplicacion\\cliweb_soap_dotnet\\cliweb_soap_dotnet\\views\\ventas\\credito.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|solutionrelative:cliweb_soap_dotnet\\views\\ventas\\credito.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|d:\\p1.1_electrodomesticos_soap_dotnet_gr04\\aplicacion\\cliweb_soap_dotnet\\cliweb_soap_dotnet\\models\\ventasviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|solutionrelative:cliweb_soap_dotnet\\models\\ventasviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|d:\\p1.1_electrodomesticos_soap_dotnet_gr04\\aplicacion\\cliweb_soap_dotnet\\cliweb_soap_dotnet\\views\\ventas\\creditoexito.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|solutionrelative:cliweb_soap_dotnet\\views\\ventas\\creditoexito.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|d:\\p1.1_electrodomesticos_soap_dotnet_gr04\\aplicacion\\cliweb_soap_dotnet\\cliweb_soap_dotnet\\views\\inventario\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|solutionrelative:cliweb_soap_dotnet\\views\\inventario\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|d:\\p1.1_electrodomesticos_soap_dotnet_gr04\\aplicacion\\cliweb_soap_dotnet\\cliweb_soap_dotnet\\views\\inventario\\crear.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|solutionrelative:cliweb_soap_dotnet\\views\\inventario\\crear.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|d:\\p1.1_electrodomesticos_soap_dotnet_gr04\\aplicacion\\cliweb_soap_dotnet\\cliweb_soap_dotnet\\models\\dtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|solutionrelative:cliweb_soap_dotnet\\models\\dtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|d:\\p1.1_electrodomesticos_soap_dotnet_gr04\\aplicacion\\cliweb_soap_dotnet\\cliweb_soap_dotnet\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|solutionrelative:cliweb_soap_dotnet\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|d:\\p1.1_electrodomesticos_soap_dotnet_gr04\\aplicacion\\cliweb_soap_dotnet\\cliweb_soap_dotnet\\views\\home\\menu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|solutionrelative:cliweb_soap_dotnet\\views\\home\\menu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|d:\\p1.1_electrodomesticos_soap_dotnet_gr04\\aplicacion\\cliweb_soap_dotnet\\cliweb_soap_dotnet\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|solutionrelative:cliweb_soap_dotnet\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|d:\\p1.1_electrodomesticos_soap_dotnet_gr04\\aplicacion\\cliweb_soap_dotnet\\cliweb_soap_dotnet\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|solutionrelative:cliweb_soap_dotnet\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|d:\\p1.1_electrodomesticos_soap_dotnet_gr04\\aplicacion\\cliweb_soap_dotnet\\cliweb_soap_dotnet\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|solutionrelative:cliweb_soap_dotnet\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|d:\\p1.1_electrodomesticos_soap_dotnet_gr04\\aplicacion\\cliweb_soap_dotnet\\cliweb_soap_dotnet\\models\\authviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|solutionrelative:cliweb_soap_dotnet\\models\\authviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|d:\\p1.1_electrodomesticos_soap_dotnet_gr04\\aplicacion\\cliweb_soap_dotnet\\cliweb_soap_dotnet\\models\\evaluacioncreditodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|solutionrelative:cliweb_soap_dotnet\\models\\evaluacioncreditodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|d:\\p1.1_electrodomesticos_soap_dotnet_gr04\\aplicacion\\cliweb_soap_dotnet\\cliweb_soap_dotnet\\services\\bancosoapservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|solutionrelative:cliweb_soap_dotnet\\services\\bancosoapservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|d:\\p1.1_electrodomesticos_soap_dotnet_gr04\\aplicacion\\cliweb_soap_dotnet\\cliweb_soap_dotnet\\cliweb_soap_dotnet.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{34BB960D-FC5E-4B37-840F-7A894A75CC2D}|CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj|solutionrelative:cliweb_soap_dotnet\\cliweb_soap_dotnet.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Menu.cshtml",
+              "DocumentMoniker": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Views\\Home\\Menu.cshtml",
+              "RelativeDocumentMoniker": "CliWeb_Soap_Dotnet\\Views\\Home\\Menu.cshtml",
+              "ToolTip": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Views\\Home\\Menu.cshtml",
+              "RelativeToolTip": "CliWeb_Soap_Dotnet\\Views\\Home\\Menu.cshtml",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAgwEsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-19T10:19:19.219Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "CliWeb_Soap_Dotnet\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "CliWeb_Soap_Dotnet\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAgwHgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-19T10:19:00.075Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "CliWeb_Soap_Dotnet\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "CliWeb_Soap_Dotnet\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAADwvyYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T10:18:44.096Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AuthViewModels.cs",
+              "DocumentMoniker": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Models\\AuthViewModels.cs",
+              "RelativeDocumentMoniker": "CliWeb_Soap_Dotnet\\Models\\AuthViewModels.cs",
+              "ToolTip": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Models\\AuthViewModels.cs",
+              "RelativeToolTip": "CliWeb_Soap_Dotnet\\Models\\AuthViewModels.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T10:18:32.948Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EfectivoExito.cshtml",
+              "DocumentMoniker": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Views\\Ventas\\EfectivoExito.cshtml",
+              "RelativeDocumentMoniker": "CliWeb_Soap_Dotnet\\Views\\Ventas\\EfectivoExito.cshtml",
+              "ToolTip": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Views\\Ventas\\EfectivoExito.cshtml",
+              "RelativeToolTip": "CliWeb_Soap_Dotnet\\Views\\Ventas\\EfectivoExito.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-19T10:18:10.168Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Efectivo.cshtml",
+              "DocumentMoniker": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Views\\Ventas\\Efectivo.cshtml",
+              "RelativeDocumentMoniker": "CliWeb_Soap_Dotnet\\Views\\Ventas\\Efectivo.cshtml",
+              "ToolTip": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Views\\Ventas\\Efectivo.cshtml",
+              "RelativeToolTip": "CliWeb_Soap_Dotnet\\Views\\Ventas\\Efectivo.cshtml",
+              "ViewState": "AgIAADgAAAAAAAAAAAAiwFQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-19T10:17:45.306Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "VentasController.cs",
+              "DocumentMoniker": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Controllers\\VentasController.cs",
+              "RelativeDocumentMoniker": "CliWeb_Soap_Dotnet\\Controllers\\VentasController.cs",
+              "ToolTip": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Controllers\\VentasController.cs",
+              "RelativeToolTip": "CliWeb_Soap_Dotnet\\Controllers\\VentasController.cs",
+              "ViewState": "AgIAAOUAAAAAAAAAAAAiwO8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T10:03:30.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "InventarioController.cs",
+              "DocumentMoniker": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Controllers\\InventarioController.cs",
+              "RelativeDocumentMoniker": "CliWeb_Soap_Dotnet\\Controllers\\InventarioController.cs",
+              "ToolTip": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Controllers\\InventarioController.cs",
+              "RelativeToolTip": "CliWeb_Soap_Dotnet\\Controllers\\InventarioController.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAiwGUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T12:13:58.838Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Editar.cshtml",
+              "DocumentMoniker": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Views\\Inventario\\Editar.cshtml",
+              "RelativeDocumentMoniker": "CliWeb_Soap_Dotnet\\Views\\Inventario\\Editar.cshtml",
+              "ToolTip": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Views\\Inventario\\Editar.cshtml",
+              "RelativeToolTip": "CliWeb_Soap_Dotnet\\Views\\Inventario\\Editar.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-19T12:20:50.595Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Views\\Inventario\\Index.cshtml",
+              "RelativeDocumentMoniker": "CliWeb_Soap_Dotnet\\Views\\Inventario\\Index.cshtml",
+              "ToolTip": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Views\\Inventario\\Index.cshtml",
+              "RelativeToolTip": "CliWeb_Soap_Dotnet\\Views\\Inventario\\Index.cshtml",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAgwFYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-19T12:24:26.674Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Crear.cshtml",
+              "DocumentMoniker": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Views\\Inventario\\Crear.cshtml",
+              "RelativeDocumentMoniker": "CliWeb_Soap_Dotnet\\Views\\Inventario\\Crear.cshtml",
+              "ToolTip": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Views\\Inventario\\Crear.cshtml",
+              "RelativeToolTip": "CliWeb_Soap_Dotnet\\Views\\Inventario\\Crear.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-19T12:24:59.433Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CreditoExito.cshtml",
+              "DocumentMoniker": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Views\\Ventas\\CreditoExito.cshtml",
+              "RelativeDocumentMoniker": "CliWeb_Soap_Dotnet\\Views\\Ventas\\CreditoExito.cshtml",
+              "ToolTip": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Views\\Ventas\\CreditoExito.cshtml",
+              "RelativeToolTip": "CliWeb_Soap_Dotnet\\Views\\Ventas\\CreditoExito.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-19T10:08:52.549Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Credito.cshtml",
+              "DocumentMoniker": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Views\\Ventas\\Credito.cshtml",
+              "RelativeDocumentMoniker": "CliWeb_Soap_Dotnet\\Views\\Ventas\\Credito.cshtml",
+              "ToolTip": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Views\\Ventas\\Credito.cshtml",
+              "RelativeToolTip": "CliWeb_Soap_Dotnet\\Views\\Ventas\\Credito.cshtml",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAgwGgAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-19T10:08:31.876Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Productos.cshtml",
+              "DocumentMoniker": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Views\\Ventas\\Productos.cshtml",
+              "RelativeDocumentMoniker": "CliWeb_Soap_Dotnet\\Views\\Ventas\\Productos.cshtml",
+              "ToolTip": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Views\\Ventas\\Productos.cshtml",
+              "RelativeToolTip": "CliWeb_Soap_Dotnet\\Views\\Ventas\\Productos.cshtml",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAiwJMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-19T10:07:58.202Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Cedula.cshtml",
+              "DocumentMoniker": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Views\\Ventas\\Cedula.cshtml",
+              "RelativeDocumentMoniker": "CliWeb_Soap_Dotnet\\Views\\Ventas\\Cedula.cshtml",
+              "ToolTip": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Views\\Ventas\\Cedula.cshtml",
+              "RelativeToolTip": "CliWeb_Soap_Dotnet\\Views\\Ventas\\Cedula.cshtml",
+              "ViewState": "AgIAADsAAAAAAAAAAAAiwFcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-19T10:05:44.388Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "VentasViewModels.cs",
+              "DocumentMoniker": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Models\\VentasViewModels.cs",
+              "RelativeDocumentMoniker": "CliWeb_Soap_Dotnet\\Models\\VentasViewModels.cs",
+              "ToolTip": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Models\\VentasViewModels.cs",
+              "RelativeToolTip": "CliWeb_Soap_Dotnet\\Models\\VentasViewModels.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAA3wCMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T10:02:53.075Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\appsettings.json",
+              "RelativeDocumentMoniker": "CliWeb_Soap_Dotnet\\appsettings.json",
+              "ToolTip": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\appsettings.json",
+              "RelativeToolTip": "CliWeb_Soap_Dotnet\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-19T09:56:31.945Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Program.cs",
+              "RelativeDocumentMoniker": "CliWeb_Soap_Dotnet\\Program.cs",
+              "ToolTip": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Program.cs",
+              "RelativeToolTip": "CliWeb_Soap_Dotnet\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T09:56:24.166Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "EvaluacionCreditoDto.cs",
+              "DocumentMoniker": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Models\\EvaluacionCreditoDto.cs",
+              "RelativeDocumentMoniker": "CliWeb_Soap_Dotnet\\Models\\EvaluacionCreditoDto.cs",
+              "ToolTip": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Models\\EvaluacionCreditoDto.cs",
+              "RelativeToolTip": "CliWeb_Soap_Dotnet\\Models\\EvaluacionCreditoDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T09:56:14.095Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "BancoSoapService.cs",
+              "DocumentMoniker": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Services\\BancoSoapService.cs",
+              "RelativeDocumentMoniker": "CliWeb_Soap_Dotnet\\Services\\BancoSoapService.cs",
+              "ToolTip": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Services\\BancoSoapService.cs",
+              "RelativeToolTip": "CliWeb_Soap_Dotnet\\Services\\BancoSoapService.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAkwDoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T09:55:50.242Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "CliWeb_Soap_Dotnet\\Models\\ErrorViewModel.cs",
+              "ToolTip": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "CliWeb_Soap_Dotnet\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T09:54:28.214Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ApiService.cs",
+              "DocumentMoniker": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Services\\ApiService.cs",
+              "RelativeDocumentMoniker": "CliWeb_Soap_Dotnet\\Services\\ApiService.cs",
+              "ToolTip": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Services\\ApiService.cs",
+              "RelativeToolTip": "CliWeb_Soap_Dotnet\\Services\\ApiService.cs",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAiwJUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T09:53:37.088Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "CliWeb_Soap_Dotnet.csproj",
+              "DocumentMoniker": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj",
+              "RelativeDocumentMoniker": "CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj",
+              "ToolTip": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj",
+              "RelativeToolTip": "CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-19T09:53:14.206Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "DTOs.cs",
+              "DocumentMoniker": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Models\\DTOs.cs",
+              "RelativeDocumentMoniker": "CliWeb_Soap_Dotnet\\Models\\DTOs.cs",
+              "ToolTip": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\Models\\DTOs.cs",
+              "RelativeToolTip": "CliWeb_Soap_Dotnet\\Models\\DTOs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T09:47:01.908Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

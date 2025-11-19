@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="ClienteMovil.Pages.InfoBancariaPage"
+             Title="Información Bancaria"
+             BackgroundColor="#FFFFFF">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+            
+            <Label Text="🏦 Información Bancaria"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   Margin="0,20,0,20"
+                   TextColor="#333"/>
+            
+            <ActivityIndicator x:Name="Loading" IsRunning="False" Color="#2196F3"/>
+            
+            <!-- Info Cliente -->
+            <Frame x:Name="FrameInfo" 
+                   CornerRadius="15" 
+                   HasShadow="True" 
+                   Padding="20" 
+                   BackgroundColor="White"
+                   IsVisible="False">
+                <VerticalStackLayout Spacing="15">
+                    <Label x:Name="LblNombre" FontSize="20" FontAttributes="Bold"/>
+                    <Label x:Name="LblCedula" FontSize="16" TextColor="#666"/>
+                    <Label x:Name="LblFechaNacimiento" FontSize="14" TextColor="#666"/>
+                    <Label x:Name="LblEstadoCivil" FontSize="14" TextColor="#666"/>
+                    
+                    <BoxView HeightRequest="1" Color="#E0E0E0" Margin="0,10"/>
+                    
+                    <Label Text="Cuentas Bancarias:" FontSize="18" FontAttributes="Bold"/>
+                    
+                    <CollectionView x:Name="CuentasCollection">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame Margin="0,5" Padding="15" CornerRadius="10" BackgroundColor="#F5F5F5" HasShadow="False">
+                                    <VerticalStackLayout Spacing="5">
+                                        <Label Text="{Binding TipoCuenta}"
+                                               FontSize="16"
+                                               FontAttributes="Bold"/>
+                                        <Label Text="{Binding NumeroCuenta, StringFormat='Cuenta: {0}'}"
+                                               FontSize="14"
+                                               TextColor="#666"/>
+                                        <Label Text="{Binding Saldo, StringFormat='Saldo: ${0:N2}'}"
+                                               FontSize="16"
+                                               TextColor="#4CAF50"
+                                               FontAttributes="Bold"/>
+                                    </VerticalStackLayout>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </VerticalStackLayout>
+            </Frame>
+            
+            <Label x:Name="LblError" 
+                   IsVisible="False" 
+                   TextColor="Red" 
+                   FontSize="16"
+                   HorizontalOptions="Center"/>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

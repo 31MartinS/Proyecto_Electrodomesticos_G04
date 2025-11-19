@@ -1,0 +1,55 @@
+<Window x:Class="ClienteEscritorio.Views.VentaCreditoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Pago con Crédito" 
+        Height="500" 
+        Width="600"
+        WindowStartupLocation="CenterScreen"
+        Background="{StaticResource BackgroundBrush}"
+        Loaded="Window_Loaded">
+    <Grid Margin="30">
+        <StackPanel>
+            <TextBlock Text="Pago con Crédito" Style="{StaticResource MainTitle}"/>
+            <!-- Franja verde superior (solo si elegible) -->
+            <Border x:Name="PanelElegible" Background="{StaticResource SuccessBrush}" CornerRadius="10" Padding="10" Margin="0,20,0,10" Visibility="Collapsed">
+                <TextBlock Text="Usuario elegible para crédito" FontSize="16" FontWeight="Bold" Foreground="Black" TextAlignment="Center"/>
+            </Border>
+            <!-- Franja roja si no elegible -->
+            <Border x:Name="PanelNoElegible" Background="{StaticResource RedButtonBrush}" CornerRadius="10" Padding="10" Margin="0,20,0,10" Visibility="Collapsed">
+                <TextBlock x:Name="TxtMensajeNoElegible" Text="Usuario no es elegible para crédito" FontSize="16" FontWeight="Bold" Foreground="Black" TextAlignment="Center" Visibility="Visible"/>
+            </Border>
+            <!-- Monto máximo aprobado -->
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0" VerticalAlignment="Center">
+                <TextBlock Text="Monto Máximo Aprobado:" FontSize="14" Width="180"/>
+                <TextBox x:Name="TxtMontoMaximo" Style="{StaticResource PillTextBox}" Width="150" IsReadOnly="True"/>
+            </StackPanel>
+            <!-- Selección de cuotas -->
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0" VerticalAlignment="Center">
+                <TextBlock Text="Seleccione número de cuotas:" FontSize="14" Width="180"/>
+                <ComboBox x:Name="CmbCuotas" Style="{StaticResource PillComboBox}" Width="150">
+                    <ComboBoxItem Content="3"/>
+                    <ComboBoxItem Content="6"/>
+                    <ComboBoxItem Content="9"/>
+                    <ComboBoxItem Content="12"/>
+                    <ComboBoxItem Content="18"/>
+                    <ComboBoxItem Content="24"/>
+                </ComboBox>
+            </StackPanel>
+            <!-- Botones -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,30,0,0">
+                <Button Content="Confirmar Pago y Generar Factura" 
+                        Style="{StaticResource PillButton}"
+                        Background="{StaticResource GreenButtonBrush}"
+                        Width="250"
+                        Margin="10,0"
+                        Click="BtnConfirmar_Click"/>
+                <Button Content="Volver" 
+                        Style="{StaticResource PillButton}"
+                        Background="{StaticResource GrayButtonBrush}"
+                        Width="150"
+                        Margin="10,0"
+                        Click="BtnVolver_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

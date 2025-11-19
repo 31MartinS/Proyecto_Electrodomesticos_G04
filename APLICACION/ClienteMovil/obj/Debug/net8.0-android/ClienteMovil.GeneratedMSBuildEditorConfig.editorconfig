@@ -1,0 +1,133 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = true
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0-android
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ClienteMovil
+build_property.ProjectDir = C:\src\proyecto_conjunta\ClienteMovil\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/src/proyecto_conjunta/ClienteMovil/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ClienteMovil.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/src/proyecto_conjunta/ClienteMovil/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ClienteMovil.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/src/proyecto_conjunta/ClienteMovil/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ClienteMovil.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/src/proyecto_conjunta/ClienteMovil/Pages/CompraCreditoPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ClienteMovil.Pages.CompraCreditoPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\CompraCreditoPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\CompraCreditoPage.xaml
+
+[C:/src/proyecto_conjunta/ClienteMovil/Pages/CompraEfectivoExitoPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ClienteMovil.Pages.CompraEfectivoExitoPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\CompraEfectivoExitoPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\CompraEfectivoExitoPage.xaml
+
+[C:/src/proyecto_conjunta/ClienteMovil/Pages/CompraEfectivoPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ClienteMovil.Pages.CompraEfectivoPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\CompraEfectivoPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\CompraEfectivoPage.xaml
+
+[C:/src/proyecto_conjunta/ClienteMovil/Pages/CreditoExitoPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ClienteMovil.Pages.CreditoExitoPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\CreditoExitoPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\CreditoExitoPage.xaml
+
+[C:/src/proyecto_conjunta/ClienteMovil/Pages/FacturaDetallePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ClienteMovil.Pages.FacturaDetallePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\FacturaDetallePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\FacturaDetallePage.xaml
+
+[C:/src/proyecto_conjunta/ClienteMovil/Pages/FacturasHistorialPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ClienteMovil.Pages.FacturasHistorialPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\FacturasHistorialPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\FacturasHistorialPage.xaml
+
+[C:/src/proyecto_conjunta/ClienteMovil/Pages/InfoBancariaPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ClienteMovil.Pages.InfoBancariaPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\InfoBancariaPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\InfoBancariaPage.xaml
+
+[C:/src/proyecto_conjunta/ClienteMovil/Pages/InventarioPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ClienteMovil.Pages.InventarioPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\InventarioPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\InventarioPage.xaml
+
+[C:/src/proyecto_conjunta/ClienteMovil/Pages/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ClienteMovil.Pages.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\LoginPage.xaml
+
+[C:/src/proyecto_conjunta/ClienteMovil/Pages/MenuPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ClienteMovil.Pages.MenuPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\MenuPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\MenuPage.xaml
+
+[C:/src/proyecto_conjunta/ClienteMovil/Pages/ProductoFormPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ClienteMovil.Pages.ProductoFormPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\ProductoFormPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\ProductoFormPage.xaml
+
+[C:/src/proyecto_conjunta/ClienteMovil/Pages/ProductosPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ClienteMovil.Pages.ProductosPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\ProductosPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\ProductosPage.xaml
+
+[C:/src/proyecto_conjunta/ClienteMovil/Pages/RegistroClientePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ClienteMovil.Pages.RegistroClientePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\RegistroClientePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\RegistroClientePage.xaml
+
+[C:/src/proyecto_conjunta/ClienteMovil/Pages/VentaCedulaPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ClienteMovil.Pages.VentaCedulaPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\VentaCedulaPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\VentaCedulaPage.xaml
+
+[C:/src/proyecto_conjunta/ClienteMovil/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ClienteMovil.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/src/proyecto_conjunta/ClienteMovil/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ClienteMovil.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml

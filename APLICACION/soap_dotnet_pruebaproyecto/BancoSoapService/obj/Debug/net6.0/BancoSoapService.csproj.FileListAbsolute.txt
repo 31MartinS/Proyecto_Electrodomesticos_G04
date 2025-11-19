@@ -1,0 +1,8 @@
+C:\src\proyecto_conjunta\soap_dotnet_pruebaproyecto\BancoSoapService\obj\Debug\net6.0\BancoSoapService.csproj.AssemblyReference.cache
+C:\src\proyecto_conjunta\soap_dotnet_pruebaproyecto\BancoSoapService\obj\Debug\net6.0\rpswa.dswa.cache.json
+C:\src\proyecto_conjunta\soap_dotnet_pruebaproyecto\BancoSoapService\obj\Debug\net6.0\BancoSoapService.GeneratedMSBuildEditorConfig.editorconfig
+C:\src\proyecto_conjunta\soap_dotnet_pruebaproyecto\BancoSoapService\obj\Debug\net6.0\BancoSoapService.AssemblyInfoInputs.cache
+C:\src\proyecto_conjunta\soap_dotnet_pruebaproyecto\BancoSoapService\obj\Debug\net6.0\BancoSoapService.AssemblyInfo.cs
+C:\src\proyecto_conjunta\soap_dotnet_pruebaproyecto\BancoSoapService\obj\Debug\net6.0\BancoSoapService.csproj.CoreCompileInputs.cache
+C:\src\proyecto_conjunta\soap_dotnet_pruebaproyecto\BancoSoapService\obj\Debug\net6.0\BancoSoapService.MvcApplicationPartsAssemblyInfo.cache
+C:\src\proyecto_conjunta\soap_dotnet_pruebaproyecto\BancoSoapService\obj\Debug\net6.0\BancoSoapService.sourcelink.json

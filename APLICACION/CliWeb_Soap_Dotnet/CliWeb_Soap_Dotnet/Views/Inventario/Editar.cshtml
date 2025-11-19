@@ -1,0 +1,183 @@
+﻿@model ClienteWeb.Models.CreateProductoDto
+@{
+    ViewData["Title"] = "Editar Producto";
+    var id = ViewBag.IdProducto;
+    var codigo = ViewBag.Codigo as string;  // lo llenas en el controller
+}
+
+<div class="product-edit-wrapper">
+    <h1 class="pe-title">Editar Producto</h1>
+
+    <form asp-action="Editar" method="post" enctype="multipart/form-data" class="pe-form">
+        <input type="hidden" name="id" value="@id" />
+
+        <!-- CÓDIGO (solo lectura, viene de ViewBag) -->
+        <div class="pe-field">
+            <label class="pe-label">Código:</label>
+            <input class="pe-input" value="@codigo" readonly />
+        </div>
+
+        <!-- NOMBRE -->
+        <div class="pe-field">
+            <label asp-for="Nombre" class="pe-label"></label>
+            <input asp-for="Nombre" class="pe-input" />
+        </div>
+
+        <!-- DESCRIPCIÓN -->
+        <div class="pe-field">
+            <label asp-for="Descripcion" class="pe-label"></label>
+            <textarea asp-for="Descripcion" class="pe-input pe-textarea"></textarea>
+        </div>
+
+        <!-- PRECIO DE VENTA -->
+        <div class="pe-field">
+            <label asp-for="PrecioVenta" class="pe-label">Precio de Venta:</label>
+            <input asp-for="PrecioVenta" class="pe-input" />
+        </div>
+
+        <!-- SUBIR IMAGEN -->
+        <div class="pe-upload">
+            <input type="file" id="imageFile" name="imageFile" accept="image/*" hidden />
+            <button type="button" class="btn-upload" onclick="document.getElementById('imageFile').click();">
+                Subir Imagen
+            </button>
+            <div id="uploadHint" class="pe-upload-hint">
+                Sin imagen. Haga clic para subir una.
+            </div>
+        </div>
+
+        <!-- BOTONES -->
+        <div class="pe-buttons">
+            <button type="submit" class="btn-save">Guardar</button>
+            <a asp-action="Index" class="btn-cancel">Cancelar</a>
+        </div>
+    </form>
+</div>
+
+<script>
+    const imageInput = document.getElementById('imageFile');
+    const uploadHint = document.getElementById('uploadHint');
+
+    if (imageInput && uploadHint) {
+        imageInput.addEventListener('change', () => {
+            if (imageInput.files.length > 0) {
+                uploadHint.textContent = imageInput.files[0].name;
+            } else {
+                uploadHint.textContent = 'Sin imagen. Haga clic para subir una.';
+            }
+        });
+    }
+</script>
+
+<style>
+    .product-edit-wrapper {
+        width: 70%;
+        margin: 0 auto;
+        font-family: 'Segoe UI', Arial, sans-serif;
+    }
+
+    .pe-title {
+        text-align: center;
+        font-size: 2.4rem;
+        font-weight: 800;
+        margin-bottom: 2rem;
+    }
+
+    .pe-form {
+        margin-top: 1rem;
+    }
+
+    .pe-field {
+        margin-bottom: 1.5rem;
+    }
+
+    .pe-label {
+        display: block;
+        margin-bottom: 0.4rem;
+        font-size: 1rem;
+    }
+
+    .pe-input {
+        width: 100%;
+        border-radius: 25px;
+        border: 1px solid #dddddd;
+        padding: 0.9rem 1.2rem;
+        font-size: 1rem;
+        box-sizing: border-box;
+    }
+
+    .pe-textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+
+    .pe-input:focus {
+        outline: none;
+        border-color: #7fd180;
+        box-shadow: 0 0 0 2px rgba(127, 209, 128, 0.25);
+    }
+
+    .pe-upload {
+        text-align: center;
+        margin: 2rem 0 2.5rem 0;
+    }
+
+    .btn-upload {
+        background-color: #615DFF;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        padding: 0.8rem 3rem;
+        font-size: 1.05rem;
+        cursor: pointer;
+    }
+
+        .btn-upload:hover {
+            background-color: #4a47e0;
+        }
+
+    .pe-upload-hint {
+        margin-top: 0.4rem;
+        font-size: 0.85rem;
+        color: #777777;
+    }
+
+    .pe-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .btn-save,
+    .btn-cancel {
+        border: none;
+        border-radius: 25px;
+        padding: 0.8rem 3rem;
+        font-size: 1.1rem;
+        cursor: pointer;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .btn-save {
+        background-color: #9AFF9A;
+        color: #000;
+    }
+
+        .btn-save:hover {
+            background-color: #82f082;
+        }
+
+    .btn-cancel {
+        background-color: #D9D9D9;
+        color: #000;
+        display: inline-block;
+        text-align: center;
+        line-height: 1.4;
+    }
+
+        .btn-cancel:hover {
+            background-color: #c8c8c8;
+        }
+</style>

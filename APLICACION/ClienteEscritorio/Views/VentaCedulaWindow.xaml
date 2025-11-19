@@ -1,0 +1,42 @@
+<Window x:Class="ClienteEscritorio.Views.VentaCedulaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Realizar Venta" 
+        Height="350" 
+        Width="500"
+        WindowStartupLocation="CenterScreen"
+        Background="{StaticResource BackgroundBrush}">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="350">
+            <!-- Título -->
+            <TextBlock Text="Realizar Venta" Style="{StaticResource MainTitle}"/>
+            
+            <!-- Instrucción -->
+            <TextBlock Text="Ingrese cédula del cliente:" 
+                      FontSize="16" 
+                      Margin="0,30,0,10"
+                      HorizontalAlignment="Center"/>
+            
+            <!-- Campo cédula -->
+            <TextBox x:Name="TxtCedula" 
+                     Style="{StaticResource PillTextBox}" 
+                     Width="300"
+                     MaxLength="10"/>
+            
+            <!-- Botones -->
+            <Button Content="Continuar" 
+                    Style="{StaticResource PillButton}"
+                    Background="{StaticResource GreenButtonBrush}"
+                    Width="200"
+                    Margin="0,30,0,0"
+                    Click="BtnContinuar_Click"/>
+            
+            <Button Content="Volver" 
+                    Style="{StaticResource PillButton}"
+                    Background="{StaticResource GrayButtonBrush}"
+                    Width="200"
+                    Margin="0,10,0,0"
+                    Click="BtnVolver_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

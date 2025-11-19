@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="ClienteMovil.Pages.CompraEfectivoExitoPage"
+             Title="Compra Exitosa"
+             BackgroundColor="#FFFFFF">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20" VerticalOptions="Center">
+            
+            <Frame BackgroundColor="#2ECC71" 
+                   CornerRadius="10" 
+                   Padding="15" 
+                   Margin="0,20,0,20">
+                <Label Text="Venta Exitosa!"
+                       FontSize="28"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       TextColor="#FFFFFF"/>
+            </Frame>
+            
+            <!-- Info de Factura -->
+            <Frame CornerRadius="15" HasShadow="True" Padding="15" BackgroundColor="White">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="{Binding Factura.NumeroFactura, StringFormat='Factura: {0}'}"
+                           FontSize="16"
+                           FontAttributes="Bold"
+                           TextColor="#000000"/>
+                    <Label Text="{Binding Factura.Total, StringFormat='Total: ${0:N2}'}"
+                           FontSize="20"
+                           TextColor="#000000"
+                           FontAttributes="Bold"/>
+                    <Label Text="Descuento 33% aplicado"
+                           FontSize="14"
+                           TextColor="#000000"/>
+                </VerticalStackLayout>
+            </Frame>
+            
+            <Button Text="FINALIZAR"
+                    BackgroundColor="#96FF96"
+                    TextColor="#000000"
+                    CornerRadius="25"
+                    HeightRequest="50"
+                    FontAttributes="Bold"
+                    Margin="0,20,0,20"
+                    Clicked="OnFinalizarClicked"/>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

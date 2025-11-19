@@ -1,0 +1,81 @@
+﻿@model ClienteWeb.Models.VentaCreditoExitoViewModel
+
+@{
+    ViewData["Title"] = "Pago con crédito";
+}
+
+<div class="text-center my-4">
+    <h1 class="fw-bold">Pago con Crédito</h1>
+</div>
+
+<div class="text-center mb-4">
+    <div style="display:inline-block;
+                background-color:#00c853;
+                color:white;
+                padding:12px 40px;
+                border-radius:4px;
+                font-size:1.3rem;
+                font-weight:600;">
+        Venta Exitosa!
+    </div>
+</div>
+
+<!-- Datos básicos de la factura (sin Cédula, para evitar el error) -->
+@if (Model.Factura != null)
+{
+    <div class="card mb-4" style="max-width:700px;margin:0 auto;">
+        <div class="card-body">
+            <p><strong>N° Factura:</strong> @Model.Factura.NumeroFactura</p>
+            <p><strong>Fecha:</strong> @Model.Factura.Fecha.ToString("g")</p>
+            <p><strong>Total:</strong> @Model.Factura.Total.ToString("C2")</p>
+            <p><strong>Forma de pago:</strong> @Model.Factura.FormaPago</p>
+            <p><strong>Mensaje:</strong> @Model.Factura.Mensaje</p>
+        </div>
+    </div>
+}
+
+@if (Model.Cuotas != null && Model.Cuotas.Any())
+{
+    <div class="table-responsive" style="max-width:900px;margin:0 auto 2rem auto;">
+        <table class="table table-bordered text-center align-middle">
+            <thead>
+                <tr>
+                    <th># Cuota</th>
+                    <th>Valor Cuota</th>
+                    <th>Interés Pagado</th>
+                    <th>Capital Pagado</th>
+                    <th>Saldo</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var c in Model.Cuotas)
+                {
+                    <tr>
+                        <td>@c.NumeroCuota</td>
+                        <td>@c.ValorCuota.ToString("C2")</td>
+                        <td>@c.InteresPagado.ToString("C2")</td>
+                        <td>@c.CapitalPagado.ToString("C2")</td>
+                        <td>@c.SaldoRestante.ToString("C2")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <p class="text-center text-muted mb-4">
+        No se recibió tabla de amortización desde el banco.
+    </p>
+}
+
+<div class="text-center my-4">
+    <a asp-action="Cedula"
+       class="btn"
+       style="background-color:#e0e0e0;
+              border-radius:999px;
+              padding:10px 40px;
+              font-size:1.1rem;">
+        Volver
+    </a>
+</div>

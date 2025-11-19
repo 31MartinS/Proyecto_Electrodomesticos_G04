@@ -1,0 +1,28 @@
+<Window x:Class="ClienteEscritorio.Views.VentaEfectivoExitoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Venta Exitosa" 
+        Height="300" 
+        Width="400"
+        WindowStartupLocation="CenterScreen"
+        Background="{StaticResource BackgroundBrush}">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="350">
+            <!-- Título -->
+            <TextBlock Text="Pago en Efectivo" Style="{StaticResource MainTitle}"/>
+            
+            <!-- Franja verde de éxito -->
+            <Border Background="{StaticResource SuccessBrush}" CornerRadius="10" Padding="15" Margin="0,30,0,20">
+                <TextBlock Text="Venta Exitosa!" FontSize="18" FontWeight="Bold" Foreground="Black" TextAlignment="Center"/>
+            </Border>
+            
+            <!-- Botón Volver -->
+            <Button Content="Volver" 
+                    Style="{StaticResource PillButton}"
+                    Background="{StaticResource GrayButtonBrush}"
+                    Width="200"
+                    Margin="0,10,0,0"
+                    Click="BtnVolver_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
