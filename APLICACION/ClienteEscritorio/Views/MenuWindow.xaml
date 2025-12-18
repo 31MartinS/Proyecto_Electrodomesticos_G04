@@ -1,7 +1,7 @@
 <Window x:Class="ClienteEscritorio.Views.MenuWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Menú Principal - Prueba Parcial 1" 
+        Title="Menú Principal - Prueba Parcial 2" 
         Height="450" 
         Width="600"
         WindowStartupLocation="CenterScreen"
@@ -9,7 +9,7 @@
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <!-- Título principal -->
-            <TextBlock Text="Prueba Parcial 1" Style="{StaticResource MainTitle}"/>
+            <TextBlock Text="Prueba Parcial 2" Style="{StaticResource MainTitle}"/>
             
             <!-- Subtítulo con bienvenida -->
             <TextBlock Text="Bienvenido, Monster" Style="{StaticResource SubTitle}" Margin="0,10,0,50"/>

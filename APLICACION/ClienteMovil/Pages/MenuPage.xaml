@@ -6,7 +6,7 @@
              BackgroundColor="#FFFFFF">
     <VerticalStackLayout Padding="20" Spacing="20" VerticalOptions="Center">
         
-        <Label Text="Prueba Parcial 1"
+        <Label Text="Prueba Parcial 2"
                FontSize="32"
                FontAttributes="Bold"
                HorizontalOptions="Center"
