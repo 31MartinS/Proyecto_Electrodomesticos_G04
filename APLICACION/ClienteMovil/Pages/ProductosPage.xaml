@@ -3,22 +3,68 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="ClienteMovil.Pages.ProductosPage"
              Title="Electrodomésticos">
-    <Grid RowDefinitions="Auto,*">
+    <Grid RowDefinitions="Auto,Auto,*">
         
         <!-- Header -->
         <Frame Grid.Row="0" 
                BackgroundColor="#96FF96" 
                CornerRadius="0" 
                Padding="20">
-            <Label Text="Electrodomésticos"
-                   FontSize="24"
-                   FontAttributes="Bold"
-                   TextColor="#000000"
-                   HorizontalOptions="Center"/>
+            <Grid ColumnDefinitions="*,Auto">
+                <Label Text="Electrodomésticos"
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       TextColor="#000000"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
+                
+                <!-- Botón Carrito con Badge -->
+                <Frame Grid.Column="1"
+                       BackgroundColor="#FFD700"
+                       CornerRadius="25"
+                       Padding="10"
+                       HasShadow="True">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnVerCarritoClicked"/>
+                    </Frame.GestureRecognizers>
+                    <Grid>
+                        <Label Text="🛒"
+                               FontSize="24"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"/>
+                        <Label x:Name="BadgeLabel"
+                               Text=""
+                               FontSize="10"
+                               FontAttributes="Bold"
+                               TextColor="White"
+                               BackgroundColor="Red"
+                               WidthRequest="18"
+                               HeightRequest="18"
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"
+                               HorizontalOptions="End"
+                               VerticalOptions="Start"
+                               Margin="0,-5,-5,0"
+                               IsVisible="False">
+                            <Label.Clip>
+                                <EllipseGeometry Center="9,9" RadiusX="9" RadiusY="9"/>
+                            </Label.Clip>
+                        </Label>
+                    </Grid>
+                </Frame>
+            </Grid>
         </Frame>
+
+        <!-- Instrucción -->
+        <Label Grid.Row="1"
+               Text="Selecciona: Efectivo (compra inmediata) | Crédito (compra inmediata) | Carrito (comprar varios)"
+               FontSize="12"
+               TextColor="#666"
+               HorizontalOptions="Center"
+               Margin="10,10,10,5"/>
         
         <!-- Lista de Productos -->
-        <RefreshView Grid.Row="1" 
+        <RefreshView Grid.Row="2" 
                      x:Name="RefreshView" 
                      Refreshing="OnRefreshing">
             <CollectionView x:Name="ProductosCollection"
@@ -43,11 +89,11 @@
                                Padding="0" 
                                CornerRadius="15" 
                                HasShadow="True">
-                            <Grid Padding="15" ColumnDefinitions="80,*,Auto" RowDefinitions="Auto,Auto,Auto">
+                            <Grid Padding="15" ColumnDefinitions="80,*" RowDefinitions="Auto,Auto,Auto,Auto">
                                 
                                 <!-- Imagen -->
                                 <Frame Grid.Row="0"
-                                       Grid.RowSpan="3"
+                                       Grid.RowSpan="4"
                                        Grid.Column="0"
                                        CornerRadius="10"
                                        Padding="0"
@@ -74,29 +120,41 @@
                                        FontSize="18"
                                        TextColor="#4CAF50"
                                        FontAttributes="Bold"
-                                       Margin="10,0,0,10"/>
+                                       Margin="10,0,0,5"/>
                                 
-                                <!-- Botones -->
-                                <HorizontalStackLayout Grid.Row="2" 
+                                <!-- Botón Agregar al Carrito -->
+                                <Button Grid.Row="2"
+                                        Grid.Column="1"
+                                        Text="🛒 Agregar al Carrito"
+                                        BackgroundColor="#FFA500"
+                                        TextColor="White"
+                                        CornerRadius="20"
+                                        FontSize="12"
+                                        Padding="10,5"
+                                        Margin="10,5,0,5"
+                                        CommandParameter="{Binding .}"
+                                        Clicked="OnAgregarCarritoClicked"/>
+                                
+                                <!-- Botones Compra Directa -->
+                                <HorizontalStackLayout Grid.Row="3" 
                                                        Grid.Column="1"
-                                                       Grid.ColumnSpan="2"
                                                        Spacing="10"
-                                                       Margin="10,0,0,0">
+                                                       Margin="10,5,0,0">
                                     <Button Text="Efectivo"
                                             BackgroundColor="#96FF96"
                                             TextColor="#000000"
                                             CornerRadius="20"
-                                            FontSize="12"
-                                            Padding="15,5"
+                                            FontSize="11"
+                                            Padding="12,5"
                                             CommandParameter="{Binding .}"
                                             Clicked="OnEfectivoClicked"/>
                                     
-                                    <Button Text="Crédito Directo"
+                                    <Button Text="Crédito"
                                             BackgroundColor="#FFD700"
                                             TextColor="#000000"
                                             CornerRadius="20"
-                                            FontSize="12"
-                                            Padding="15,5"
+                                            FontSize="11"
+                                            Padding="12,5"
                                             CommandParameter="{Binding .}"
                                             Clicked="OnCreditoClicked"/>
                                 </HorizontalStackLayout>

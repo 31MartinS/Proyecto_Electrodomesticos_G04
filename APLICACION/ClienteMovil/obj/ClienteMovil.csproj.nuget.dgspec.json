@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\src\\proyecto_conjunta\\ClienteMovil\\ClienteMovil.csproj": {}
+    "C:\\src\\Proyecto_Electrodomesticos_G04\\APLICACION\\ClienteMovil\\ClienteMovil.csproj": {}
   },
   "projects": {
-    "C:\\src\\proyecto_conjunta\\ClienteMovil\\ClienteMovil.csproj": {
+    "C:\\src\\Proyecto_Electrodomesticos_G04\\APLICACION\\ClienteMovil\\ClienteMovil.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\src\\proyecto_conjunta\\ClienteMovil\\ClienteMovil.csproj",
+        "projectUniqueName": "C:\\src\\Proyecto_Electrodomesticos_G04\\APLICACION\\ClienteMovil\\ClienteMovil.csproj",
         "projectName": "ClienteMovil",
-        "projectPath": "C:\\src\\proyecto_conjunta\\ClienteMovil\\ClienteMovil.csproj",
+        "projectPath": "C:\\src\\Proyecto_Electrodomesticos_G04\\APLICACION\\ClienteMovil\\ClienteMovil.csproj",
         "packagesPath": "C:\\Users\\suqui\\.nuget\\packages\\",
-        "outputPath": "C:\\src\\proyecto_conjunta\\ClienteMovil\\obj\\",
+        "outputPath": "C:\\src\\Proyecto_Electrodomesticos_G04\\APLICACION\\ClienteMovil\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
@@ -52,6 +52,14 @@
         "net8.0-android34.0": {
           "targetAlias": "net8.0-android",
           "dependencies": {
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[8.0.0, )"

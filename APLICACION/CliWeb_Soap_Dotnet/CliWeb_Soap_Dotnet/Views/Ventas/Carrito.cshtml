@@ -1,0 +1,211 @@
+@model ClienteWeb.Models.VentaCarritoViewModel
+
+@{
+    ViewData["Title"] = "Carrito de Compras";
+}
+
+<div style="text-align:center; margin-top:40px;">
+    <h1 style="font-size:40px; font-weight:700; margin-bottom:10px;">
+        🛒 Carrito de Compras
+    </h1>
+    <p style="font-size:18px; margin-bottom:30px;">
+        <strong>Cédula cliente:</strong> @Model.Cedula
+    </p>
+
+    <div style="display:flex; gap:30px; max-width:1400px; margin:0 auto;">
+        <!-- Columna izquierda: Productos disponibles -->
+        <div style="flex:2;">
+            <h2 style="font-size:28px; font-weight:600; margin-bottom:20px;">Productos Disponibles</h2>
+            
+            <table style="width:100%; border-collapse:collapse; font-size:16px;">
+                <thead>
+                    <tr>
+                        <th style="border-bottom:3px solid #000; padding:12px; text-align:left;">Producto</th>
+                        <th style="border-bottom:3px solid #000; padding:12px; text-align:center;">Precio</th>
+                        <th style="border-bottom:3px solid #000; padding:12px; text-align:center;">Agregar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var p in Model.Productos)
+                    {
+                        <tr>
+                            <td style="border-bottom:2px solid #000; padding:16px;">
+                                <div style="display:flex; align-items:center; gap:16px;">
+                                    @if (!string.IsNullOrEmpty(p.ImageUrl))
+                                    {
+                                        <img src="@p.ImageUrl"
+                                             alt="@p.Nombre"
+                                             style="width:60px; height:60px; border-radius:8px; object-fit:cover; background:#eef1f7;" />
+                                    }
+                                    else
+                                    {
+                                        <div style="width:60px; height:60px; border-radius:8px; background:#eef1f7; display:flex; align-items:center; justify-content:center; color:#888; font-size:10px;">
+                                            Sin imagen
+                                        </div>
+                                    }
+                                    <span>@p.Nombre</span>
+                                </div>
+                            </td>
+                            <td style="border-bottom:2px solid #000; padding:16px; text-align:center; font-size:18px;">
+                                @p.PrecioVenta.ToString("C2")
+                            </td>
+                            <td style="border-bottom:2px solid #000; padding:16px; text-align:center;">
+                                <input type="number" id="cant_@p.IdProducto" value="1" min="1" style="width:50px; padding:5px; text-align:center; margin-right:10px;" />
+                                <button onclick="agregarAlCarrito(@p.IdProducto, '@Html.Raw(p.Nombre.Replace("'", "\\'"))', @p.PrecioVenta, '@p.ImageUrl')"
+                                        style="padding:8px 20px; border-radius:999px; background:#7CFF8A; border:none; color:#000; font-weight:600; cursor:pointer;">
+                                    +
+                                </button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Columna derecha: Carrito -->
+        <div style="flex:1; background:#f9f9f9; padding:20px; border-radius:15px;">
+            <h2 style="font-size:24px; font-weight:600; margin-bottom:20px;">Mi Carrito</h2>
+            
+            <div id="carrito-items">
+                @if (Model.CarritoItems.Count == 0)
+                {
+                    <p style="color:#999; text-align:center; padding:20px;">Carrito vacío</p>
+                }
+                else
+                {
+                    foreach (var item in Model.CarritoItems)
+                    {
+                        <div class="carrito-item" id="item_@item.IdProducto" style="border-bottom:1px solid #ddd; padding:15px 0;">
+                            <div style="font-weight:600; margin-bottom:5px;">@item.Nombre</div>
+                            <div style="font-size:14px; color:#666; margin-bottom:8px;">
+                                @item.Cantidad x @item.Precio.ToString("C2")
+                            </div>
+                            <div style="display:flex; justify-content:space-between; align-items:center;">
+                                <strong style="color:#4CAF50;">@item.Subtotal.ToString("C2")</strong>
+                                <button onclick="eliminarDelCarrito(@item.IdProducto)"
+                                        style="padding:4px 12px; border-radius:12px; background:#FF4444; border:none; color:#fff; cursor:pointer; font-size:12px;">
+                                    ✖
+                                </button>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+
+            <div style="margin-top:20px; padding-top:20px; border-top:2px solid #000;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+                    <strong style="font-size:20px;">TOTAL:</strong>
+                    <strong id="total-carrito" style="font-size:24px; color:#4CAF50;">@Model.Total.ToString("C2")</strong>
+                </div>
+
+                @if (Model.CarritoItems.Count > 0)
+                {
+                    <button onclick="pagarEfectivo()"
+                            style="width:100%; padding:12px; border-radius:999px; background:#7CFF8A; border:none; color:#000; font-weight:700; font-size:16px; cursor:pointer; margin-bottom:10px;">
+                        💵 Pagar en Efectivo
+                    </button>
+
+                    <div style="margin-bottom:10px;">
+                        <label style="font-size:14px; display:block; margin-bottom:5px;">Plazo (meses):</label>
+                        <select id="plazo-credito" style="width:100%; padding:8px; border-radius:8px; border:1px solid #ddd;">
+                            <option value="3">3 meses</option>
+                            <option value="6">6 meses</option>
+                            <option value="9">9 meses</option>
+                            <option value="12" selected>12 meses</option>
+                            <option value="18">18 meses</option>
+                            <option value="24">24 meses</option>
+                        </select>
+                    </div>
+
+                    <button onclick="pagarCredito()"
+                            style="width:100%; padding:12px; border-radius:999px; background:#FFD766; border:none; color:#000; font-weight:700; font-size:16px; cursor:pointer;">
+                        💳 Pagar a Crédito
+                    </button>
+                }
+            </div>
+        </div>
+    </div>
+
+    <a asp-action="Productos" asp-route-cedula="@Model.Cedula"
+       style="display:inline-block; margin-top:30px; padding:12px 40px; border-radius:999px; background:#dcdcdc; text-decoration:none; color:#000; font-weight:600; font-size:18px;">
+        Volver a Productos
+    </a>
+</div>
+
+<script>
+    function agregarAlCarrito(idProducto, nombre, precio, imageUrl) {
+        const cantidad = parseInt(document.getElementById('cant_' + idProducto).value);
+        
+        fetch('@Url.Action("AgregarAlCarrito", "Ventas")', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: `idProducto=${idProducto}&nombre=${encodeURIComponent(nombre)}&precio=${precio}&cantidad=${cantidad}&imageUrl=${encodeURIComponent(imageUrl || '')}`
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                location.reload();
+            }
+        });
+    }
+
+    function eliminarDelCarrito(idProducto) {
+        fetch('@Url.Action("EliminarDelCarrito", "Ventas")', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: `idProducto=${idProducto}`
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                location.reload();
+            }
+        });
+    }
+
+    function pagarEfectivo() {
+        if (confirm('¿Confirmar pago en efectivo?')) {
+            const form = document.createElement('form');
+            form.method = 'POST';
+            form.action = '@Url.Action("PagarCarritoEfectivo", "Ventas")';
+            
+            const input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = 'cedula';
+            input.value = '@Model.Cedula';
+            
+            form.appendChild(input);
+            document.body.appendChild(form);
+            form.submit();
+        }
+    }
+
+    function pagarCredito() {
+        const plazo = document.getElementById('plazo-credito').value;
+        
+        if (confirm(`¿Confirmar pago a crédito en ${plazo} meses?`)) {
+            const form = document.createElement('form');
+            form.method = 'POST';
+            form.action = '@Url.Action("PagarCarritoCredito", "Ventas")';
+            
+            const inputCedula = document.createElement('input');
+            inputCedula.type = 'hidden';
+            inputCedula.name = 'cedula';
+            inputCedula.value = '@Model.Cedula';
+            
+            const inputPlazo = document.createElement('input');
+            inputPlazo.type = 'hidden';
+            inputPlazo.name = 'plazoMeses';
+            inputPlazo.value = plazo;
+            
+            form.appendChild(inputCedula);
+            form.appendChild(inputPlazo);
+            document.body.appendChild(form);
+            form.submit();
+        }
+    }
+</script>

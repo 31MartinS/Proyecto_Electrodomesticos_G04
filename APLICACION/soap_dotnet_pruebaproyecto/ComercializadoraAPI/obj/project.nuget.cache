@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QWHJdaS35Rs=",
+  "dgSpecHash": "6pkKEtbaeqg=",
   "success": true,
-  "projectFilePath": "C:\\src\\proyecto_conjunta\\soap_dotnet_pruebaproyecto\\ComercializadoraAPI\\ComercializadoraAPI.csproj",
+  "projectFilePath": "C:\\src\\Proyecto_Electrodomesticos_G04\\APLICACION\\soap_dotnet_pruebaproyecto\\ComercializadoraAPI\\ComercializadoraAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\suqui\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\suqui\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

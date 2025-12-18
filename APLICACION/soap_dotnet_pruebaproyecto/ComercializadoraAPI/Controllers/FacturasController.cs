@@ -181,7 +181,7 @@ namespace ComercializadoraAPI.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Factura>> GetFactura(int id)
+        public async Task<ActionResult<object>> GetFactura(int id)
         {
             try
             {
@@ -189,7 +189,42 @@ namespace ComercializadoraAPI.Controllers
                     .Include(f => f.Cliente)
                     .Include(f => f.Detalles)
                     .ThenInclude(d => d.Producto)
-                    .FirstOrDefaultAsync(f => f.IdFactura == id);
+                    .Where(f => f.IdFactura == id)
+                    .Select(f => new
+                    {
+                        f.IdFactura,
+                        f.NumeroFactura,
+                        f.Fecha,
+                        f.FormaPago,
+                        f.Subtotal,
+                        f.Descuento,
+                        f.Total,
+                        f.IdCreditoBanco,
+                        Cliente = new
+                        {
+                            f.Cliente.Cedula,
+                            Nombres = f.Cliente.Nombres,
+                            Apellidos = f.Cliente.Apellidos
+                        },
+                        Detalles = f.Detalles.Select(d => new
+                        {
+                            d.IdDetalle,
+                            d.IdProducto,
+                            d.Cantidad,
+                            d.PrecioUnitario,
+                            d.TotalLinea,
+                            Producto = new
+                            {
+                                d.Producto.Codigo,
+                                d.Producto.Nombre,
+                                d.Producto.Descripcion,
+                                ImageUrl = !string.IsNullOrEmpty(d.Producto.ImageFileName) 
+                                    ? $"http://localhost:5001/images/products/{d.Producto.ImageFileName}" 
+                                    : null
+                            }
+                        }).ToList()
+                    })
+                    .FirstOrDefaultAsync();
 
                 if (factura == null)
                 {
@@ -206,13 +241,49 @@ namespace ComercializadoraAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Factura>>> GetFacturas()
+        public async Task<ActionResult<IEnumerable<object>>> GetFacturas()
         {
             try
             {
                 var facturas = await _context.Facturas
                     .Include(f => f.Cliente)
+                    .Include(f => f.Detalles)
+                    .ThenInclude(d => d.Producto)
                     .OrderByDescending(f => f.Fecha)
+                    .Select(f => new
+                    {
+                        f.IdFactura,
+                        f.NumeroFactura,
+                        f.Fecha,
+                        f.FormaPago,
+                        f.Subtotal,
+                        f.Descuento,
+                        f.Total,
+                        f.IdCreditoBanco,
+                        Cliente = new
+                        {
+                            f.Cliente.Cedula,
+                            Nombres = f.Cliente.Nombres,
+                            Apellidos = f.Cliente.Apellidos
+                        },
+                        Detalles = f.Detalles.Select(d => new
+                        {
+                            d.IdDetalle,
+                            d.IdProducto,
+                            d.Cantidad,
+                            d.PrecioUnitario,
+                            d.TotalLinea,
+                            Producto = new
+                            {
+                                d.Producto.Codigo,
+                                d.Producto.Nombre,
+                                d.Producto.Descripcion,
+                                ImageUrl = !string.IsNullOrEmpty(d.Producto.ImageFileName) 
+                                    ? $"http://localhost:5001/images/products/{d.Producto.ImageFileName}" 
+                                    : null
+                            }
+                        }).ToList()
+                    })
                     .ToListAsync();
 
                 return Ok(facturas);
@@ -254,8 +325,8 @@ namespace ComercializadoraAPI.Controllers
                         Cliente = new
                         {
                             f.Cliente.Cedula,
-                            Nombre = f.Cliente.Nombres,
-                            Apellido = f.Cliente.Apellidos
+                            Nombres = f.Cliente.Nombres,
+                            Apellidos = f.Cliente.Apellidos
                         },
                         Detalles = f.Detalles.Select(d => new
                         {
@@ -270,7 +341,7 @@ namespace ComercializadoraAPI.Controllers
                                 d.Producto.Nombre,
                                 d.Producto.Descripcion,
                                 ImageUrl = !string.IsNullOrEmpty(d.Producto.ImageFileName) 
-                                    ? $"http://10.40.20.89:5001/images/products/{d.Producto.ImageFileName}" 
+                                    ? $"http://localhost:5001/images/products/{d.Producto.ImageFileName}" 
                                     : null
                             }
                         }).ToList()

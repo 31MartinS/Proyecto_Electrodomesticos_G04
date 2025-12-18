@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\src\\proyecto_conjunta\\soap_dotnet_pruebaproyecto\\ComercializadoraAPI\\ComercializadoraAPI.csproj": {}
+    "C:\\src\\Proyecto_Electrodomesticos_G04\\APLICACION\\soap_dotnet_pruebaproyecto\\ComercializadoraAPI\\ComercializadoraAPI.csproj": {}
   },
   "projects": {
-    "C:\\src\\proyecto_conjunta\\soap_dotnet_pruebaproyecto\\ComercializadoraAPI\\ComercializadoraAPI.csproj": {
+    "C:\\src\\Proyecto_Electrodomesticos_G04\\APLICACION\\soap_dotnet_pruebaproyecto\\ComercializadoraAPI\\ComercializadoraAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\src\\proyecto_conjunta\\soap_dotnet_pruebaproyecto\\ComercializadoraAPI\\ComercializadoraAPI.csproj",
+        "projectUniqueName": "C:\\src\\Proyecto_Electrodomesticos_G04\\APLICACION\\soap_dotnet_pruebaproyecto\\ComercializadoraAPI\\ComercializadoraAPI.csproj",
         "projectName": "ComercializadoraAPI",
-        "projectPath": "C:\\src\\proyecto_conjunta\\soap_dotnet_pruebaproyecto\\ComercializadoraAPI\\ComercializadoraAPI.csproj",
+        "projectPath": "C:\\src\\Proyecto_Electrodomesticos_G04\\APLICACION\\soap_dotnet_pruebaproyecto\\ComercializadoraAPI\\ComercializadoraAPI.csproj",
         "packagesPath": "C:\\Users\\suqui\\.nuget\\packages\\",
-        "outputPath": "C:\\src\\proyecto_conjunta\\soap_dotnet_pruebaproyecto\\ComercializadoraAPI\\obj\\",
+        "outputPath": "C:\\src\\Proyecto_Electrodomesticos_G04\\APLICACION\\soap_dotnet_pruebaproyecto\\ComercializadoraAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

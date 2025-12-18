@@ -18,6 +18,22 @@
         <strong>Cédula cliente:</strong> @Model.Cedula
     </p>
 
+    <!-- Botón del carrito -->
+    <div style="text-align:right; max-width:1000px; margin:0 auto 20px auto;">
+        <a asp-action="Carrito" asp-route-cedula="@Model.Cedula"
+           style="
+                display:inline-block;
+                padding:12px 28px;
+                border-radius:999px;
+                background:#7CFF8A;
+                text-decoration:none;
+                color:#000;
+                font-weight:700;
+                font-size:18px;">
+            🛒 Ver Carrito
+        </a>
+    </div>
+
     <!-- Tabla de productos -->
     <table style="
             width:100%;

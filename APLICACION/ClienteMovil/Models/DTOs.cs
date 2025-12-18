@@ -97,8 +97,8 @@ namespace ClienteMovil.Models
     public class ClienteFacturaDto
     {
         public string Cedula { get; set; } = string.Empty;
-        public string Nombre { get; set; } = string.Empty;
-        public string Apellido { get; set; } = string.Empty;
+        public string Nombres { get; set; } = string.Empty;
+        public string Apellidos { get; set; } = string.Empty;
     }
 
     public class DetalleFacturaListDto
@@ -123,5 +123,16 @@ namespace ClienteMovil.Models
     {
         public List<AmortizationCuota> Cuotas { get; set; } = new List<AmortizationCuota>();
         public string Mensaje { get; set; } = string.Empty;
+    }
+
+    // Carrito de compras
+    public class CarritoItem
+    {
+        public int IdProducto { get; set; }
+        public string Nombre { get; set; } = string.Empty;
+        public decimal Precio { get; set; }
+        public int Cantidad { get; set; }
+        public decimal Subtotal => Cantidad * Precio;
+        public string? ImageUrl { get; set; }
     }
 }

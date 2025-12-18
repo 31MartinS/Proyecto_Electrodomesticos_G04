@@ -11,7 +11,10 @@ namespace ClienteEscritorio.Converters
 {
     public class ImageUrlConverter : IValueConverter
     {
-        private static readonly HttpClient _httpClient = new HttpClient();
+        private static readonly HttpClient _httpClient = new HttpClient
+        {
+            Timeout = TimeSpan.FromSeconds(10)
+        };
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
@@ -26,28 +29,23 @@ namespace ClienteEscritorio.Converters
 
             try
             {
-                // Si es una URL HTTP/HTTPS, descargar y cargar en memoria
+                // Si es una URL HTTP/HTTPS, usar BitmapImage con UriSource
                 if (url.StartsWith("http://", StringComparison.OrdinalIgnoreCase) ||
                     url.StartsWith("https://", StringComparison.OrdinalIgnoreCase))
                 {
                     try
                     {
-                        System.Diagnostics.Debug.WriteLine($"[ImageUrlConverter] Descargando desde: {url}");
-                        
-                        // Descargar la imagen de forma síncrona para el binding
-                        var imageBytes = _httpClient.GetByteArrayAsync(url).GetAwaiter().GetResult();
-                        
-                        System.Diagnostics.Debug.WriteLine($"[ImageUrlConverter] Descargados {imageBytes.Length} bytes");
+                        System.Diagnostics.Debug.WriteLine($"[ImageUrlConverter] Cargando desde URL: {url}");
                         
                         var bitmap = new BitmapImage();
                         bitmap.BeginInit();
+                        bitmap.UriSource = new Uri(url, UriKind.Absolute);
                         bitmap.CacheOption = BitmapCacheOption.OnLoad;
                         bitmap.CreateOptions = BitmapCreateOptions.IgnoreImageCache;
-                        bitmap.StreamSource = new MemoryStream(imageBytes);
                         bitmap.EndInit();
-                        bitmap.Freeze();
                         
-                        System.Diagnostics.Debug.WriteLine($"[ImageUrlConverter] Imagen cargada exitosamente: {bitmap.PixelWidth}x{bitmap.PixelHeight}");
+                        // No freeze, para permitir actualizaciones
+                        System.Diagnostics.Debug.WriteLine($"[ImageUrlConverter] Imagen cargada exitosamente");
                         return bitmap;
                     }
                     catch (Exception ex)

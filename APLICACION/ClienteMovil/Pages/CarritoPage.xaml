@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="ClienteMovil.Pages.CarritoPage"
+             Title="Carrito de Compras"
+             BackgroundColor="#FFFFFF">
+    
+    <Grid RowDefinitions="Auto,*,Auto,Auto">
+        
+        <!-- Header -->
+        <Frame Grid.Row="0" 
+               BackgroundColor="#96FF96" 
+               CornerRadius="0" 
+               Padding="20">
+            <Label Text="🛒 Carrito de Compras"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   TextColor="#000000"
+                   HorizontalOptions="Center"/>
+        </Frame>
+
+        <!-- Lista del Carrito -->
+        <CollectionView Grid.Row="1" 
+                        x:Name="CarritoCollection"
+                        SelectionMode="None"
+                        Margin="10">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" ItemSpacing="10"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.EmptyView>
+                <VerticalStackLayout Padding="20" VerticalOptions="Center">
+                    <Label Text="🛒"
+                           FontSize="60"
+                           HorizontalOptions="Center"/>
+                    <Label Text="El carrito está vacío"
+                           FontSize="16"
+                           HorizontalOptions="Center"
+                           TextColor="#999"/>
+                    <Button Text="Agregar Productos"
+                            BackgroundColor="#96FF96"
+                            TextColor="#000000"
+                            CornerRadius="25"
+                            Margin="0,20,0,0"
+                            Clicked="OnVolverClicked"/>
+                </VerticalStackLayout>
+            </CollectionView.EmptyView>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Padding="15" 
+                           CornerRadius="15" 
+                           HasShadow="True"
+                           BackgroundColor="White">
+                        <Grid ColumnDefinitions="80,*,Auto" RowDefinitions="Auto,Auto,Auto,Auto">
+                            
+                            <!-- Imagen -->
+                            <Frame Grid.Row="0"
+                                   Grid.RowSpan="4"
+                                   Grid.Column="0"
+                                   CornerRadius="10"
+                                   Padding="0"
+                                   HeightRequest="80"
+                                   WidthRequest="80"
+                                   HasShadow="False"
+                                   BackgroundColor="#F0F0F0">
+                                <Image Source="{Binding ImageUrl}"
+                                       Aspect="AspectFill"/>
+                            </Frame>
+                            
+                            <!-- Nombre -->
+                            <Label Grid.Row="0" 
+                                   Grid.Column="1"
+                                   Text="{Binding Nombre}"
+                                   FontSize="16"
+                                   FontAttributes="Bold"
+                                   Margin="10,0,0,5"/>
+                            
+                            <!-- Precio unitario -->
+                            <Label Grid.Row="1" 
+                                   Grid.Column="1"
+                                   Text="{Binding Precio, StringFormat='Precio: ${0:N2}'}"
+                                   FontSize="14"
+                                   TextColor="#666"
+                                   Margin="10,0,0,5"/>
+                            
+                            <!-- Cantidad -->
+                            <HorizontalStackLayout Grid.Row="2" 
+                                                   Grid.Column="1"
+                                                   Spacing="5"
+                                                   Margin="10,5,0,5">
+                                <Label Text="Cantidad:"
+                                       FontSize="14"
+                                       VerticalOptions="Center"/>
+                                <Button Text="-"
+                                        BackgroundColor="#FF6B6B"
+                                        TextColor="White"
+                                        WidthRequest="40"
+                                        HeightRequest="40"
+                                        CornerRadius="20"
+                                        FontSize="18"
+                                        FontAttributes="Bold"
+                                        CommandParameter="{Binding .}"
+                                        Clicked="OnDisminuirClicked"/>
+                                <Label Text="{Binding Cantidad}"
+                                       FontSize="18"
+                                       FontAttributes="Bold"
+                                       WidthRequest="40"
+                                       HorizontalTextAlignment="Center"
+                                       VerticalOptions="Center"/>
+                                <Button Text="+"
+                                        BackgroundColor="#4CAF50"
+                                        TextColor="White"
+                                        WidthRequest="40"
+                                        HeightRequest="40"
+                                        CornerRadius="20"
+                                        FontSize="18"
+                                        FontAttributes="Bold"
+                                        CommandParameter="{Binding .}"
+                                        Clicked="OnAumentarClicked"/>
+                            </HorizontalStackLayout>
+                            
+                            <!-- Subtotal -->
+                            <Label Grid.Row="3" 
+                                   Grid.Column="1"
+                                   Text="{Binding Subtotal, StringFormat='Subtotal: ${0:N2}'}"
+                                   FontSize="16"
+                                   FontAttributes="Bold"
+                                   TextColor="#4CAF50"
+                                   Margin="10,5,0,0"/>
+                            
+                            <!-- Botón Eliminar -->
+                            <Button Grid.Row="0"
+                                    Grid.RowSpan="4"
+                                    Grid.Column="2"
+                                    Text="✖"
+                                    BackgroundColor="#FF4444"
+                                    TextColor="White"
+                                    WidthRequest="50"
+                                    HeightRequest="50"
+                                    CornerRadius="25"
+                                    FontSize="20"
+                                    FontAttributes="Bold"
+                                    CommandParameter="{Binding .}"
+                                    Clicked="OnEliminarClicked"
+                                    VerticalOptions="Center"/>
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <!-- Total -->
+        <Frame Grid.Row="2" 
+               BackgroundColor="#F8F8F8" 
+               Padding="20"
+               Margin="10,0">
+            <Grid ColumnDefinitions="*,Auto">
+                <Label Text="TOTAL:"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"/>
+                <Label x:Name="TotalLabel"
+                       Grid.Column="1"
+                       Text="$0.00"
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       TextColor="#4CAF50"
+                       VerticalOptions="Center"/>
+            </Grid>
+        </Frame>
+
+        <!-- Botones de acción -->
+        <VerticalStackLayout Grid.Row="3" 
+                             Padding="20" 
+                             Spacing="10">
+            
+            <Button Text="💵 Pagar en Efectivo"
+                    BackgroundColor="#96FF96"
+                    TextColor="#000000"
+                    CornerRadius="25"
+                    HeightRequest="50"
+                    FontAttributes="Bold"
+                    Clicked="OnPagarEfectivoClicked"/>
+            
+            <Button Text="💳 Pagar a Crédito"
+                    BackgroundColor="#FFD700"
+                    TextColor="#000000"
+                    CornerRadius="25"
+                    HeightRequest="50"
+                    FontAttributes="Bold"
+                    Clicked="OnPagarCreditoClicked"/>
+            
+            <Button Text="Volver a Productos"
+                    BackgroundColor="#D9D9D9"
+                    TextColor="#000000"
+                    CornerRadius="25"
+                    HeightRequest="50"
+                    FontAttributes="Bold"
+                    Clicked="OnVolverClicked"/>
+        </VerticalStackLayout>
+        
+    </Grid>
+</ContentPage>

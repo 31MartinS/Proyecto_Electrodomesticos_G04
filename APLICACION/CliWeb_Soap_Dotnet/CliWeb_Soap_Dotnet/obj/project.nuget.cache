@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jk9wBLdjXdw=",
+  "dgSpecHash": "f2FGUW9xj5I=",
   "success": true,
-  "projectFilePath": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj",
+  "projectFilePath": "C:\\src\\Proyecto_Electrodomesticos_G04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\suqui\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\suqui\\.nuget\\packages\\microsoft.extensions.objectpool\\6.0.16\\microsoft.extensions.objectpool.6.0.16.nupkg.sha512",

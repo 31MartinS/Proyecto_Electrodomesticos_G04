@@ -1,12 +1,49 @@
 # Cliente Móvil - Comercializadora
 
-Aplicación móvil desarrollada con .NET MAUI para Android que permite a los clientes:
-- Iniciar sesión con cédula
-- Registrarse como nuevos clientes
-- Ver catálogo de productos con imágenes
-- Realizar compras en efectivo
-- Solicitar créditos bancarios
-- Ver información bancaria y amortizaciones
+Aplicación móvil desarrollada con .NET MAUI para Android que permite:
+- ✅ Iniciar sesión 
+- ✅ Gestionar inventario de productos
+- ✅ Ver catálogo de productos con imágenes
+- ✅ **🆕 Carrito de compras (comprar múltiples productos)**
+- ✅ Realizar compras en efectivo (con descuento 33%)
+- ✅ Solicitar créditos bancarios
+- ✅ Ver historial de facturas
+- ✅ Ver detalle de facturas con tabla de amortización
+
+## 🚀 Configuración Rápida para Dispositivo Físico
+
+### Opción 1: Script Automático (Recomendado)
+
+1. **Ejecuta el script de configuración como Administrador:**
+   ```powershell
+   cd ClienteMovil
+   .\ConfigurarRed.ps1
+   ```
+   
+   El script automáticamente:
+   - ✅ Detecta tu IP local
+   - ✅ Actualiza appsettings.json
+   - ✅ Configura el firewall de Windows
+   - ✅ Prueba la conectividad
+
+2. **Conecta tu dispositivo móvil a la misma WiFi que tu PC**
+
+3. **Inicia los servicios backend:**
+   ```powershell
+   # Terminal 1
+   cd ..\soap_dotnet_pruebaproyecto\BancoSoapService
+   dotnet run
+
+   # Terminal 2 (nueva ventana)
+   cd ..\soap_dotnet_pruebaproyecto\ComercializadoraAPI
+   dotnet run
+   ```
+
+4. **Ejecuta la app móvil desde Visual Studio (F5)**
+
+### Opción 2: Configuración Manual
+
+Ver [CONFIGURACION_RED.md](CONFIGURACION_RED.md) para instrucciones detalladas.
 
 ## Requisitos
 
@@ -18,10 +55,9 @@ Aplicación móvil desarrollada con .NET MAUI para Android que permite a los cli
 
 ### Hardware
 - Dispositivo Android físico (recomendado) o emulador
-- Dispositivo de prueba: Xiaomi 23129RA5FL (Android 15.0 - API 35)
-- Conexión WiFi a la misma red que el servidor (10.40.20.89)
+- Conexión WiFi a la misma red que el servidor
 
-## Configuración del Dispositivo
+## Configuración del Dispositivo Android
 
 ### 1. Habilitar Modo Desarrollador
 1. Ve a **Configuración** > **Acerca del teléfono**
@@ -42,13 +78,11 @@ Aplicación móvil desarrollada con .NET MAUI para Android que permite a los cli
    ```
    Deberías ver tu dispositivo listado con estado "device"
 
-### 4. Configurar Red
-El dispositivo debe estar en la **misma red WiFi** que el servidor (IP: 10.40.20.89)
+### 4. Verificar Conectividad de Red
 
-Para verificar conectividad desde el PC:
-```powershell
-adb shell ping -c 4 10.40.20.89
-```
+Desde el navegador de tu móvil, visita:
+- `http://TU_IP:5001/api/productos` (debe mostrar JSON de productos)
+- `http://TU_IP:5000/BancoService.asmx` (debe mostrar página WSDL)
 
 ## Compilación y Despliegue
 

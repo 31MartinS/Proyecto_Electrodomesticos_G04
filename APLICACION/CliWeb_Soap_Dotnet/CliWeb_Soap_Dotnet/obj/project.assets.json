@@ -2968,11 +2968,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj",
+      "projectUniqueName": "C:\\src\\Proyecto_Electrodomesticos_G04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj",
       "projectName": "CliWeb_Soap_Dotnet",
-      "projectPath": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj",
+      "projectPath": "C:\\src\\Proyecto_Electrodomesticos_G04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet.csproj",
       "packagesPath": "C:\\Users\\suqui\\.nuget\\packages\\",
-      "outputPath": "D:\\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\obj\\",
+      "outputPath": "C:\\src\\Proyecto_Electrodomesticos_G04\\APLICACION\\CliWeb_Soap_Dotnet\\CliWeb_Soap_Dotnet\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -39,9 +39,9 @@ namespace ClienteEscritorio.Views
                     return;
                 }
 
-                // Cliente existe, continuar a la pantalla de productos
-                var productosWindow = new VentaProductosWindow(cedula);
-                productosWindow.ShowDialog();
+                // Cliente existe, continuar a la pantalla de productos con carrito
+                var carritoWindow = new VentaCarritoWindow(cedula);
+                carritoWindow.ShowDialog();
                 
                 // Cerrar esta ventana si se completó la venta
                 this.Close();

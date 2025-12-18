@@ -145,5 +145,21 @@ namespace ClienteWeb.Services
 
             return JsonConvert.DeserializeObject<FacturaResponseDto>(responseJson)!;
         }
+
+        public static async Task<List<FacturaListDto>> GetFacturasAsync()
+        {
+            var response = await _httpClient.GetAsync($"{BaseUrl}/facturas");
+            response.EnsureSuccessStatusCode();
+            var json = await response.Content.ReadAsStringAsync();
+            return JsonConvert.DeserializeObject<List<FacturaListDto>>(json) ?? new List<FacturaListDto>();
+        }
+
+        public static async Task<FacturaListDto> GetFacturaAsync(int id)
+        {
+            var response = await _httpClient.GetAsync($"{BaseUrl}/facturas/{id}");
+            response.EnsureSuccessStatusCode();
+            var json = await response.Content.ReadAsStringAsync();
+            return JsonConvert.DeserializeObject<FacturaListDto>(json)!;
+        }
     }
 }

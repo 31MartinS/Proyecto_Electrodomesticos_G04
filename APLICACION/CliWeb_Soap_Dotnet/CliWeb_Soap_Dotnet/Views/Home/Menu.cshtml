@@ -15,6 +15,10 @@
         <a asp-controller="Ventas" asp-action="Cedula" class="btn-menu btn-venta">
             Realizar Venta
         </a>
+
+        <a asp-controller="Facturas" asp-action="Index" class="btn-menu btn-facturas">
+            Historial de Facturas
+        </a>
     </div>
 </div>
 
@@ -40,8 +44,9 @@
     .menu-buttons {
         display: flex;
         justify-content: center;
-        gap: 60px;
+        gap: 30px;
         margin-top: 20px;
+        flex-wrap: wrap;
     }
 
     .btn-menu {
@@ -71,5 +76,14 @@
 
         .btn-venta:hover {
             background-color: #f9d978;
+        }
+
+    .btn-facturas {
+        background-color: #B8E0FF;
+        color: #000;
+    }
+
+        .btn-facturas:hover {
+            background-color: #A0D0FF;
         }
 </style>

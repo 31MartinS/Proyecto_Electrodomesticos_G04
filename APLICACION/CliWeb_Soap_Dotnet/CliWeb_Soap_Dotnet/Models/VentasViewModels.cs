@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using BancoServiceRef;
 
 namespace ClienteWeb.Models
@@ -54,5 +55,24 @@ namespace ClienteWeb.Models
     public class VentaEfectivoExitoViewModel
     {
         public FacturaResponseDto Factura { get; set; } = new FacturaResponseDto();
+    }
+
+    public class VentaCarritoViewModel
+    {
+        public string Cedula { get; set; } = string.Empty;
+        public List<ProductoDto> Productos { get; set; } = new();
+        public List<CarritoItem> CarritoItems { get; set; } = new();
+        public decimal Total => CarritoItems.Sum(i => i.Subtotal);
+    }
+
+    public class FacturasViewModel
+    {
+        public List<FacturaListDto> Facturas { get; set; } = new();
+    }
+
+    public class FacturaDetalleViewModel
+    {
+        public FacturaListDto Factura { get; set; } = new();
+        public List<AmortizationCuota>? Cuotas { get; set; }
     }
 }

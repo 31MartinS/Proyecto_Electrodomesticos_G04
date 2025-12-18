@@ -1,0 +1,161 @@
+@model ClienteWeb.Models.FacturaDetalleViewModel
+
+@{
+    ViewData["Title"] = "Detalle de Factura";
+    var factura = Model.Factura;
+}
+
+<div style="text-align:center; margin-top:40px;">
+    <h1 style="font-size:40px; font-weight:700; margin-bottom:10px;">
+        📄 Detalle de Factura
+    </h1>
+    <h2 style="font-size:28px; margin-bottom:30px; color:#4CAF50;">
+        @factura.NumeroFactura
+    </h2>
+
+    <div style="max-width:900px; margin:0 auto; text-align:left;">
+        <!-- Información del cliente -->
+        <div style="background:#f9f9f9; padding:20px; border-radius:15px; margin-bottom:20px;">
+            <h3 style="font-size:20px; font-weight:700; margin-bottom:15px;">Información del Cliente</h3>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; font-size:16px;">
+                <div><strong>Cédula:</strong> @factura.Cliente.Cedula</div>
+                <div><strong>Fecha:</strong> @factura.Fecha.ToString("dd/MM/yyyy HH:mm")</div>
+                <div><strong>Cliente:</strong> @factura.Cliente.Nombres @factura.Cliente.Apellidos</div>
+                <div>
+                    <strong>Forma de Pago:</strong>
+                    @if (factura.FormaPago.ToUpper() == "EFECTIVO")
+                    {
+                        <span style="padding:4px 12px; background:#7CFF8A; border-radius:999px; font-weight:600; font-size:13px;">
+                            💵 EFECTIVO
+                        </span>
+                    }
+                    else
+                    {
+                        <span style="padding:4px 12px; background:#FFD766; border-radius:999px; font-weight:600; font-size:13px;">
+                            💳 CRÉDITO
+                        </span>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <!-- Productos -->
+        <div style="background:#fff; padding:20px; border:2px solid #000; border-radius:15px; margin-bottom:20px;">
+            <h3 style="font-size:20px; font-weight:700; margin-bottom:15px;">Productos</h3>
+            <table style="width:100%; border-collapse:collapse;">
+                <thead>
+                    <tr>
+                        <th style="border-bottom:2px solid #000; padding:10px; text-align:left;">Producto</th>
+                        <th style="border-bottom:2px solid #000; padding:10px; text-align:center;">Cantidad</th>
+                        <th style="border-bottom:2px solid #000; padding:10px; text-align:right;">Precio Unit.</th>
+                        <th style="border-bottom:2px solid #000; padding:10px; text-align:right;">Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var det in factura.Detalles)
+                    {
+                        <tr>
+                            <td style="border-bottom:1px solid #ddd; padding:12px;">
+                                <div style="display:flex; align-items:center; gap:12px;">
+                                    @if (!string.IsNullOrEmpty(det.Producto.ImageUrl))
+                                    {
+                                        <img src="@det.Producto.ImageUrl"
+                                             alt="@det.Producto.Nombre"
+                                             style="width:50px; height:50px; border-radius:8px; object-fit:cover; background:#eef1f7;" />
+                                    }
+                                    else
+                                    {
+                                        <div style="width:50px; height:50px; border-radius:8px; background:#eef1f7; display:flex; align-items:center; justify-content:center; font-size:20px;">
+                                            📦
+                                        </div>
+                                    }
+                                    <div>
+                                        <div style="font-weight:600;">@det.Producto.Nombre</div>
+                                        @if (!string.IsNullOrEmpty(det.Producto.Descripcion))
+                                        {
+                                            <div style="font-size:13px; color:#666;">@det.Producto.Descripcion</div>
+                                        }
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="border-bottom:1px solid #ddd; padding:12px; text-align:center; font-weight:600;">
+                                @det.Cantidad
+                            </td>
+                            <td style="border-bottom:1px solid #ddd; padding:12px; text-align:right;">
+                                @det.PrecioUnitario.ToString("C2")
+                            </td>
+                            <td style="border-bottom:1px solid #ddd; padding:12px; text-align:right; font-weight:700;">
+                                @det.TotalLinea.ToString("C2")
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            <!-- Totales -->
+            <div style="margin-top:20px; padding-top:15px; border-top:2px solid #000;">
+                <div style="display:flex; justify-content:flex-end; gap:40px; font-size:16px;">
+                    <div>
+                        <div style="margin-bottom:8px;"><strong>Subtotal:</strong></div>
+                        @if (factura.Descuento > 0)
+                        {
+                            <div style="margin-bottom:8px;"><strong>Descuento:</strong></div>
+                        }
+                        <div style="font-size:20px;"><strong>TOTAL:</strong></div>
+                    </div>
+                    <div style="text-align:right;">
+                        <div style="margin-bottom:8px;">@factura.Subtotal.ToString("C2")</div>
+                        @if (factura.Descuento > 0)
+                        {
+                            <div style="margin-bottom:8px; color:#4CAF50;">-@factura.Descuento.ToString("C2")</div>
+                        }
+                        <div style="font-size:24px; font-weight:700; color:#4CAF50;">@factura.Total.ToString("C2")</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabla de Amortización (solo para crédito) -->
+        @if (factura.FormaPago.ToUpper() == "CREDITO" && Model.Cuotas != null && Model.Cuotas.Count > 0)
+        {
+            <div style="background:#FFF9E6; padding:20px; border-radius:15px; border:2px solid #FFD766; margin-bottom:20px;">
+                <h3 style="font-size:20px; font-weight:700; margin-bottom:15px;">📊 Tabla de Amortización</h3>
+                <p style="margin-bottom:15px; color:#666;">
+                    <strong>ID Crédito Banco:</strong> @factura.IdCreditoBanco
+                </p>
+                <table style="width:100%; border-collapse:collapse; font-size:14px;">
+                    <thead>
+                        <tr style="background:#FFD766;">
+                            <th style="padding:10px; border:1px solid #ccc; text-align:center;">Cuota</th>
+                            <th style="padding:10px; border:1px solid #ccc; text-align:center;">Fecha</th>
+                            <th style="padding:10px; border:1px solid #ccc; text-align:right;">Valor Cuota</th>
+                            <th style="padding:10px; border:1px solid #ccc; text-align:right;">Interés</th>
+                            <th style="padding:10px; border:1px solid #ccc; text-align:right;">Capital</th>
+                            <th style="padding:10px; border:1px solid #ccc; text-align:right;">Saldo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var cuota in Model.Cuotas)
+                        {
+                            <tr>
+                                <td style="padding:8px; border:1px solid #ddd; text-align:center; font-weight:600;">@cuota.NumeroCuota</td>
+                                <td style="padding:8px; border:1px solid #ddd; text-align:center;">@cuota.FechaVencimiento.ToString("dd/MM/yyyy")</td>
+                                <td style="padding:8px; border:1px solid #ddd; text-align:right; font-weight:600;">@cuota.ValorCuota.ToString("C2")</td>
+                                <td style="padding:8px; border:1px solid #ddd; text-align:right;">@cuota.InteresPagado.ToString("C2")</td>
+                                <td style="padding:8px; border:1px solid #ddd; text-align:right;">@cuota.CapitalPagado.ToString("C2")</td>
+                                <td style="padding:8px; border:1px solid #ddd; text-align:right;">@cuota.SaldoRestante.ToString("C2")</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+
+        <div style="text-align:center; margin-top:30px;">
+            <a asp-action="Index"
+               style="display:inline-block; padding:12px 40px; border-radius:999px; background:#dcdcdc; text-decoration:none; color:#000; font-weight:600; font-size:18px;">
+                Volver al Historial
+            </a>
+        </div>
+    </div>
+</div>

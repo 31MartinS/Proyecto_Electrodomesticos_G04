@@ -1,4 +1,6 @@
 using System.Windows;
+using Microsoft.Extensions.Configuration;
+using System.IO;
 
 namespace ClienteEscritorio
 {
@@ -8,10 +10,15 @@ namespace ClienteEscritorio
         {
             base.OnStartup(e);
 
-            // Configurar el API base URL
-            // CAMBIAR ESTA IP A LA IP DEL SERVIDOR
-            Services.ApiService.BaseUrl = "http://10.40.20.89:5001/api";
-            Services.BancoSoapService.ServiceUrl = "http://10.40.20.89:5000/BancoService.asmx";
+            // Leer configuración desde appsettings.json
+            var configuration = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                .Build();
+
+            // Configurar el API base URL desde appsettings.json
+            Services.ApiService.BaseUrl = configuration["ServerConfiguration:ComercializadoraApiUrl"] ?? "http://localhost:5001/api";
+            Services.BancoSoapService.ServiceUrl = configuration["ServerConfiguration:BancoSoapServiceUrl"] ?? "http://localhost:5000/BancoService.asmx";
 
             // Navegar a la pantalla de login
             var loginWindow = new Views.LoginWindow();

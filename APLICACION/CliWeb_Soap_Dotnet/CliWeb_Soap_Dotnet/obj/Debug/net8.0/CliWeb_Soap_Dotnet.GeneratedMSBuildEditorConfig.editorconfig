@@ -9,81 +9,93 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CliWeb_Soap_Dotnet
 build_property.RootNamespace = CliWeb_Soap_Dotnet
-build_property.ProjectDir = D:\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\APLICACION\CliWeb_Soap_Dotnet\CliWeb_Soap_Dotnet\
+build_property.ProjectDir = C:\src\Proyecto_Electrodomesticos_G04\APLICACION\CliWeb_Soap_Dotnet\CliWeb_Soap_Dotnet\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04\APLICACION\CliWeb_Soap_Dotnet\CliWeb_Soap_Dotnet
+build_property.MSBuildProjectDirectory = C:\src\Proyecto_Electrodomesticos_G04\APLICACION\CliWeb_Soap_Dotnet\CliWeb_Soap_Dotnet
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[D:/P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04/APLICACION/CliWeb_Soap_Dotnet/CliWeb_Soap_Dotnet/Views/Home/Index.cshtml]
+[C:/src/Proyecto_Electrodomesticos_G04/APLICACION/CliWeb_Soap_Dotnet/CliWeb_Soap_Dotnet/Views/Facturas/Detalle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdHVyYXNcRGV0YWxsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/src/Proyecto_Electrodomesticos_G04/APLICACION/CliWeb_Soap_Dotnet/CliWeb_Soap_Dotnet/Views/Facturas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdHVyYXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/src/Proyecto_Electrodomesticos_G04/APLICACION/CliWeb_Soap_Dotnet/CliWeb_Soap_Dotnet/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04/APLICACION/CliWeb_Soap_Dotnet/CliWeb_Soap_Dotnet/Views/Home/Menu.cshtml]
+[C:/src/Proyecto_Electrodomesticos_G04/APLICACION/CliWeb_Soap_Dotnet/CliWeb_Soap_Dotnet/Views/Home/Menu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNZW51LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04/APLICACION/CliWeb_Soap_Dotnet/CliWeb_Soap_Dotnet/Views/Home/Privacy.cshtml]
+[C:/src/Proyecto_Electrodomesticos_G04/APLICACION/CliWeb_Soap_Dotnet/CliWeb_Soap_Dotnet/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04/APLICACION/CliWeb_Soap_Dotnet/CliWeb_Soap_Dotnet/Views/Inventario/Crear.cshtml]
+[C:/src/Proyecto_Electrodomesticos_G04/APLICACION/CliWeb_Soap_Dotnet/CliWeb_Soap_Dotnet/Views/Inventario/Crear.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50YXJpb1xDcmVhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04/APLICACION/CliWeb_Soap_Dotnet/CliWeb_Soap_Dotnet/Views/Inventario/Editar.cshtml]
+[C:/src/Proyecto_Electrodomesticos_G04/APLICACION/CliWeb_Soap_Dotnet/CliWeb_Soap_Dotnet/Views/Inventario/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50YXJpb1xFZGl0YXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04/APLICACION/CliWeb_Soap_Dotnet/CliWeb_Soap_Dotnet/Views/Inventario/Index.cshtml]
+[C:/src/Proyecto_Electrodomesticos_G04/APLICACION/CliWeb_Soap_Dotnet/CliWeb_Soap_Dotnet/Views/Inventario/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50YXJpb1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04/APLICACION/CliWeb_Soap_Dotnet/CliWeb_Soap_Dotnet/Views/Shared/Error.cshtml]
+[C:/src/Proyecto_Electrodomesticos_G04/APLICACION/CliWeb_Soap_Dotnet/CliWeb_Soap_Dotnet/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04/APLICACION/CliWeb_Soap_Dotnet/CliWeb_Soap_Dotnet/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/src/Proyecto_Electrodomesticos_G04/APLICACION/CliWeb_Soap_Dotnet/CliWeb_Soap_Dotnet/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04/APLICACION/CliWeb_Soap_Dotnet/CliWeb_Soap_Dotnet/Views/Ventas/Cedula.cshtml]
+[C:/src/Proyecto_Electrodomesticos_G04/APLICACION/CliWeb_Soap_Dotnet/CliWeb_Soap_Dotnet/Views/Ventas/Carrito.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFzXENhcnJpdG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/src/Proyecto_Electrodomesticos_G04/APLICACION/CliWeb_Soap_Dotnet/CliWeb_Soap_Dotnet/Views/Ventas/Cedula.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFzXENlZHVsYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04/APLICACION/CliWeb_Soap_Dotnet/CliWeb_Soap_Dotnet/Views/Ventas/Credito.cshtml]
+[C:/src/Proyecto_Electrodomesticos_G04/APLICACION/CliWeb_Soap_Dotnet/CliWeb_Soap_Dotnet/Views/Ventas/Credito.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFzXENyZWRpdG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04/APLICACION/CliWeb_Soap_Dotnet/CliWeb_Soap_Dotnet/Views/Ventas/CreditoExito.cshtml]
+[C:/src/Proyecto_Electrodomesticos_G04/APLICACION/CliWeb_Soap_Dotnet/CliWeb_Soap_Dotnet/Views/Ventas/CreditoExito.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFzXENyZWRpdG9FeGl0by5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04/APLICACION/CliWeb_Soap_Dotnet/CliWeb_Soap_Dotnet/Views/Ventas/Efectivo.cshtml]
+[C:/src/Proyecto_Electrodomesticos_G04/APLICACION/CliWeb_Soap_Dotnet/CliWeb_Soap_Dotnet/Views/Ventas/Efectivo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFzXEVmZWN0aXZvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04/APLICACION/CliWeb_Soap_Dotnet/CliWeb_Soap_Dotnet/Views/Ventas/EfectivoExito.cshtml]
+[C:/src/Proyecto_Electrodomesticos_G04/APLICACION/CliWeb_Soap_Dotnet/CliWeb_Soap_Dotnet/Views/Ventas/EfectivoExito.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFzXEVmZWN0aXZvRXhpdG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04/APLICACION/CliWeb_Soap_Dotnet/CliWeb_Soap_Dotnet/Views/Ventas/Productos.cshtml]
+[C:/src/Proyecto_Electrodomesticos_G04/APLICACION/CliWeb_Soap_Dotnet/CliWeb_Soap_Dotnet/Views/Ventas/Productos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFzXFByb2R1Y3Rvcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04/APLICACION/CliWeb_Soap_Dotnet/CliWeb_Soap_Dotnet/Views/_ViewImports.cshtml]
+[C:/src/Proyecto_Electrodomesticos_G04/APLICACION/CliWeb_Soap_Dotnet/CliWeb_Soap_Dotnet/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04/APLICACION/CliWeb_Soap_Dotnet/CliWeb_Soap_Dotnet/Views/_ViewStart.cshtml]
+[C:/src/Proyecto_Electrodomesticos_G04/APLICACION/CliWeb_Soap_Dotnet/CliWeb_Soap_Dotnet/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/P1.1_ELECTRODOMESTICOS_SOAP_DOTNET_GR04/APLICACION/CliWeb_Soap_Dotnet/CliWeb_Soap_Dotnet/Views/Shared/_Layout.cshtml]
+[C:/src/Proyecto_Electrodomesticos_G04/APLICACION/CliWeb_Soap_Dotnet/CliWeb_Soap_Dotnet/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-kywaq4bquf

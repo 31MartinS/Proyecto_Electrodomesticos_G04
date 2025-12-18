@@ -7,8 +7,9 @@ namespace ClienteMovil.Services
 {
     public class BancoSoapService
     {
-        // CAMBIAR ESTA IP A LA IP DEL SERVIDOR
-        public static string ServiceUrl { get; set; } = "http://10.40.20.89:5000/BancoService.asmx";
+        // Se configura automáticamente desde appsettings.json en MauiProgram.cs
+        // Para dispositivo físico, cambiar UseLocalhost a false en appsettings.json
+        public static string ServiceUrl { get; set; } = "http://localhost:5000/BancoService.asmx";
 
         public static async Task<EvaluateCreditResponse> EvaluateCreditAsync(EvaluateCreditRequest request)
         {

@@ -1,0 +1,131 @@
+<Window x:Class="ClienteEscritorio.Views.VentaCreditoCarritoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Pago a Crédito" 
+        Height="400" 
+        Width="500"
+        WindowStartupLocation="CenterScreen"
+        Background="{StaticResource BackgroundBrush}">
+    <Grid Margin="30">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="💳 Pago a Crédito" Style="{StaticResource MainTitle}" Grid.Row="0"/>
+
+        <!-- Total -->
+        <Border Grid.Row="1" Background="#F8F8F8" Padding="15" Margin="0,20,0,0" CornerRadius="8">
+            <StackPanel>
+                <TextBlock Text="Total a Financiar:" FontSize="14" Foreground="#666"/>
+                <TextBlock x:Name="TxtTotal" Text="$0.00" FontSize="28" FontWeight="Bold" Foreground="{StaticResource BlueButtonBrush}"/>
+            </StackPanel>
+        </Border>
+
+        <!-- Plazo -->
+        <StackPanel Grid.Row="2" Margin="0,20,0,0">
+            <TextBlock Text="Plazo en Meses (1-36):" FontSize="14" FontWeight="SemiBold" Margin="0,0,0,5"/>
+            <TextBox x:Name="TxtPlazo" 
+                     Text="12" 
+                     FontSize="16"
+                     Padding="10"
+                     BorderBrush="{StaticResource BlueButtonBrush}"
+                     BorderThickness="2">
+                <TextBox.Style>
+                    <Style TargetType="TextBox">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="TextBox">
+                                    <Border Background="{TemplateBinding Background}"
+                                            BorderBrush="{TemplateBinding BorderBrush}"
+                                            BorderThickness="{TemplateBinding BorderThickness}"
+                                            CornerRadius="8"
+                                            Padding="{TemplateBinding Padding}">
+                                        <ScrollViewer x:Name="PART_ContentHost"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </TextBox.Style>
+            </TextBox>
+        </StackPanel>
+
+        <!-- Estado -->
+        <Border Grid.Row="3" 
+                Background="#E8F4FD" 
+                Padding="12" 
+                Margin="0,15,0,0" 
+                CornerRadius="8"
+                BorderBrush="{StaticResource BlueButtonBrush}"
+                BorderThickness="1">
+            <TextBlock x:Name="TxtEstado" 
+                       Text="Ingrese el plazo y presione 'Evaluar Crédito'" 
+                       FontSize="13"
+                       TextWrapping="Wrap"
+                       Foreground="#333"/>
+        </Border>
+
+        <!-- Información -->
+        <Border Grid.Row="4" 
+                Background="#FFF9E6" 
+                Padding="12" 
+                Margin="0,10,0,0" 
+                CornerRadius="8"
+                BorderBrush="#FFD700"
+                BorderThickness="1">
+            <StackPanel>
+                <TextBlock Text="ℹ️ Información" FontWeight="Bold" FontSize="12" Margin="0,0,0,5"/>
+                <TextBlock Text="• Se consultará la central de riesgos del banco" 
+                           FontSize="11" 
+                           TextWrapping="Wrap"
+                           Foreground="#666"/>
+                <TextBlock Text="• La aprobación depende de su historial crediticio" 
+                           FontSize="11" 
+                           TextWrapping="Wrap"
+                           Foreground="#666"
+                           Margin="0,3,0,0"/>
+            </StackPanel>
+        </Border>
+
+        <!-- Botones -->
+        <StackPanel Grid.Row="6" 
+                    Orientation="Horizontal" 
+                    HorizontalAlignment="Center" 
+                    Margin="0,20,0,0">
+            <Button x:Name="BtnProcesar"
+                    Content="Evaluar Crédito" 
+                    Background="#FFD700"
+                    Foreground="Black"
+                    Padding="30,12"
+                    Margin="0,0,10,0"
+                    BorderThickness="0"
+                    Cursor="Hand"
+                    FontWeight="Bold"
+                    FontSize="14"
+                    Click="BtnProcesar_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                CornerRadius="25"
+                                Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button Content="Cancelar" 
+                    Style="{StaticResource PillButton}"
+                    Background="{StaticResource GrayButtonBrush}"
+                    Padding="30,12"
+                    FontSize="14"
+                    Click="BtnCancelar_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

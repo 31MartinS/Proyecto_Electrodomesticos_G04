@@ -27,7 +27,7 @@ public partial class FacturaDetallePage : ContentPage
     {
         LblNumero.Text = _factura.NumeroFactura;
         LblFecha.Text = _factura.Fecha.ToString("dd/MM/yyyy HH:mm");
-        LblCliente.Text = $"{_factura.Cliente.Nombre} {_factura.Cliente.Apellido} ({_factura.Cliente.Cedula})";
+        LblCliente.Text = $"{_factura.Cliente.Nombres} {_factura.Cliente.Apellidos} ({_factura.Cliente.Cedula})";
         LblFormaPago.Text = _factura.FormaPago;
 
         // Cargar productos

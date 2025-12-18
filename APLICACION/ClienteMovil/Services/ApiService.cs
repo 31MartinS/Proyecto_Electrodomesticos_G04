@@ -13,7 +13,7 @@ namespace ClienteMovil.Services
         private static readonly HttpClient _httpClient = new HttpClient();
         
         // CAMBIAR ESTA IP A LA IP DEL SERVIDOR
-        public static string BaseUrl { get; set; } = "http://10.40.20.89:5001/api";
+        public static string BaseUrl { get; set; } = "http://localhost:5001/api";
 
         // ==================== PRODUCTOS ====================
         
@@ -111,7 +111,7 @@ namespace ClienteMovil.Services
             catch (Exception ex)
             {
                 System.Diagnostics.Debug.WriteLine($"[ApiService] Exception: {ex.Message}");
-                throw new Exception($"Error de conexión: {ex.Message}\n\nAsegúrese de que:\n1. El servidor está ejecutándose\n2. Está conectado a la red WiFi\n3. Puede acceder a http://10.40.20.89:5001", ex);
+                throw new Exception($"Error de conexión: {ex.Message}\n\nAsegúrese de que:\n1. El servidor está ejecutándose\n2. La configuración de red es correcta\n3. Puede acceder a la API", ex);
             }
         }
 

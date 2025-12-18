@@ -1,0 +1,82 @@
+@model ClienteWeb.Models.FacturasViewModel
+
+@{
+    ViewData["Title"] = "Historial de Facturas";
+}
+
+<div style="text-align:center; margin-top:40px;">
+    <h1 style="font-size:40px; font-weight:700; margin-bottom:10px;">
+        📋 Historial de Facturas
+    </h1>
+    <p style="font-size:18px; margin-bottom:30px; color:#666;">
+        Todas las ventas realizadas
+    </p>
+
+    @if (Model.Facturas.Count == 0)
+    {
+        <div style="padding:60px; background:#f9f9f9; border-radius:15px; max-width:600px; margin:0 auto;">
+            <p style="font-size:20px; color:#999;">No hay facturas registradas</p>
+        </div>
+    }
+    else
+    {
+        <table style="width:100%; max-width:1200px; margin:0 auto 40px auto; border-collapse:collapse; font-size:16px;">
+            <thead>
+                <tr>
+                    <th style="border-bottom:3px solid #000; padding:12px; text-align:left;">Factura</th>
+                    <th style="border-bottom:3px solid #000; padding:12px; text-align:left;">Cliente</th>
+                    <th style="border-bottom:3px solid #000; padding:12px; text-align:center;">Fecha</th>
+                    <th style="border-bottom:3px solid #000; padding:12px; text-align:center;">Forma Pago</th>
+                    <th style="border-bottom:3px solid #000; padding:12px; text-align:right;">Total</th>
+                    <th style="border-bottom:3px solid #000; padding:12px; text-align:center;">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var f in Model.Facturas.OrderByDescending(x => x.Fecha))
+                {
+                    <tr>
+                        <td style="border-bottom:1px solid #ddd; padding:16px;">
+                            <strong>@f.NumeroFactura</strong>
+                        </td>
+                        <td style="border-bottom:1px solid #ddd; padding:16px;">
+                            @f.Cliente.Nombres @f.Cliente.Apellidos
+                            <br />
+                            <small style="color:#666;">CI: @f.Cliente.Cedula</small>
+                        </td>
+                        <td style="border-bottom:1px solid #ddd; padding:16px; text-align:center;">
+                            @f.Fecha.ToString("dd/MM/yyyy HH:mm")
+                        </td>
+                        <td style="border-bottom:1px solid #ddd; padding:16px; text-align:center;">
+                            @if (f.FormaPago.ToUpper() == "EFECTIVO")
+                            {
+                                <span style="padding:6px 14px; background:#7CFF8A; border-radius:999px; font-weight:600; font-size:13px;">
+                                    💵 EFECTIVO
+                                </span>
+                            }
+                            else
+                            {
+                                <span style="padding:6px 14px; background:#FFD766; border-radius:999px; font-weight:600; font-size:13px;">
+                                    💳 CRÉDITO
+                                </span>
+                            }
+                        </td>
+                        <td style="border-bottom:1px solid #ddd; padding:16px; text-align:right; font-size:18px; font-weight:700; color:#4CAF50;">
+                            @f.Total.ToString("C2")
+                        </td>
+                        <td style="border-bottom:1px solid #ddd; padding:16px; text-align:center;">
+                            <a asp-action="Detalle" asp-route-id="@f.IdFactura"
+                               style="padding:8px 20px; border-radius:999px; background:#B8E0FF; text-decoration:none; color:#000; font-weight:600; font-size:14px;">
+                                Ver Detalle
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+
+    <a asp-controller="Home" asp-action="Menu"
+       style="display:inline-block; margin-top:20px; padding:12px 40px; border-radius:999px; background:#dcdcdc; text-decoration:none; color:#000; font-weight:600; font-size:18px;">
+        Volver al Menú
+    </a>
+</div>
